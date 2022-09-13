@@ -1,0 +1,27 @@
+{
+  "headers": {
+    "via": "1.1 91356d2137f5a7345e93da4516c49ec4.cloudfront.net (CloudFront)",
+    "last-modified": "Sun, 29 May 2022 16:28:42 GMT",
+    "x-amz-cf-id": "ogzGhSLjuvNvfE_6AbauK4sQknLE11GGnGEkM-CfzmOth6M0Q2qNGg==",
+    "content-security-policy": "default-src 'none'; style-src 'unsafe-inline'; sandbox",
+    "accept-ranges": "bytes",
+    "vary": "Accept-Encoding, Origin",
+    "x-cache": "Hit from cloudfront",
+    "content-type": "application/typescript; charset=utf-8",
+    "date": "Fri, 09 Sep 2022 15:23:37 GMT",
+    "content-length": "1333",
+    "etag": "\"0f40acd9534c025939e26ead80d4f9b6\"",
+    "server": "deno/us-west1-a",
+    "access-control-allow-origin": "*",
+    "x-amz-replication-status": "FAILED",
+    "age": "229821",
+    "cache-control": "public, max-age=31536000, immutable",
+    "x-amz-cf-pop": "SEA73-P1",
+    "x-amz-version-id": "x0A0t5VgiwTmR9OPwmcVZ0plhI3sjEsY"
+  },
+  "url": "https://deno.land/x/discordeno@13.0.0-rc45/helpers/interactions/commands/editApplicationCommandPermissions.ts",
+  "now": {
+    "secs_since_epoch": 1662966837,
+    "nanos_since_epoch": 576213584
+  }
+}

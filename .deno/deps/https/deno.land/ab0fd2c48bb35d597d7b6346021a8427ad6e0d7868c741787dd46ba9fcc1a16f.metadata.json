@@ -1,0 +1,26 @@
+{
+  "headers": {
+    "date": "Mon, 12 Sep 2022 07:13:57 GMT",
+    "vary": "Accept-Encoding, Origin",
+    "access-control-allow-origin": "*",
+    "accept-ranges": "bytes",
+    "etag": "\"9d0d843c940503f28dcca620a085a35e\"",
+    "via": "1.1 91356d2137f5a7345e93da4516c49ec4.cloudfront.net (CloudFront)",
+    "x-amz-cf-id": "Hu2DKnEDOqVBn4NZwUPsbK00g8UvMs_uTjhHynOWjX-0xlNdFJESHA==",
+    "cache-control": "public, max-age=31536000, immutable",
+    "last-modified": "Sun, 29 May 2022 16:28:42 GMT",
+    "x-amz-replication-status": "FAILED",
+    "x-amz-version-id": "pLqs_ITTKDrn6EZY_fnakhzyroQlnVFT",
+    "x-cache": "Miss from cloudfront",
+    "content-security-policy": "default-src 'none'; style-src 'unsafe-inline'; sandbox",
+    "content-length": "1057",
+    "content-type": "application/typescript; charset=utf-8",
+    "x-amz-cf-pop": "SEA73-P1",
+    "server": "deno/us-west1-a"
+  },
+  "url": "https://deno.land/x/discordeno@13.0.0-rc45/helpers/guilds/getBans.ts",
+  "now": {
+    "secs_since_epoch": 1662966837,
+    "nanos_since_epoch": 44230253
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "headers": {
+    "accept-ranges": "bytes",
+    "access-control-allow-origin": "*",
+    "x-cache": "Miss from cloudfront",
+    "last-modified": "Sun, 29 May 2022 16:28:42 GMT",
+    "server": "deno/us-west1-a",
+    "x-amz-version-id": "RH6sano128b1B.HgGJIs_kgdRP9DRPnG",
+    "content-length": "565",
+    "content-security-policy": "default-src 'none'; style-src 'unsafe-inline'; sandbox",
+    "etag": "\"bac8e605e18ef04f7a512ed7680dee21\"",
+    "vary": "Accept-Encoding, Origin",
+    "cache-control": "public, max-age=31536000, immutable",
+    "x-amz-replication-status": "FAILED",
+    "via": "1.1 91356d2137f5a7345e93da4516c49ec4.cloudfront.net (CloudFront)",
+    "date": "Mon, 12 Sep 2022 07:13:58 GMT",
+    "x-amz-cf-pop": "SEA73-P1",
+    "content-type": "application/typescript; charset=utf-8",
+    "x-amz-cf-id": "fP8TPkYidk5andv2ZI3e23W0Ap86BHFy4vvBLFGdMgau0oqBwXdzQw=="
+  },
+  "url": "https://deno.land/x/discordeno@13.0.0-rc45/plugins/permissions/src/channels/deleteChannelOverwrite.ts",
+  "now": {
+    "secs_since_epoch": 1662966837,
+    "nanos_since_epoch": 169773741
+  }
+}

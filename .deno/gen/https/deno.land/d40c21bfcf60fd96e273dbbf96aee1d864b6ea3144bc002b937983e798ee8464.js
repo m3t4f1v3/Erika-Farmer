@@ -1,0 +1,11 @@
+import { requireBotGuildPermissions } from "../permissions.ts";
+export default function getBans(bot) {
+    const getBansOld = bot.helpers.getBans;
+    bot.helpers.getBans = async function(guildId) {
+        requireBotGuildPermissions(bot, guildId, [
+            "BAN_MEMBERS"
+        ]);
+        return await getBansOld(guildId);
+    };
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBCb3RXaXRoQ2FjaGUgfSBmcm9tIFwiLi4vLi4vZGVwcy50c1wiO1xuaW1wb3J0IHsgcmVxdWlyZUJvdEd1aWxkUGVybWlzc2lvbnMgfSBmcm9tIFwiLi4vcGVybWlzc2lvbnMudHNcIjtcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gZ2V0QmFucyhib3Q6IEJvdFdpdGhDYWNoZSkge1xuICBjb25zdCBnZXRCYW5zT2xkID0gYm90LmhlbHBlcnMuZ2V0QmFucztcblxuICBib3QuaGVscGVycy5nZXRCYW5zID0gYXN5bmMgZnVuY3Rpb24gKGd1aWxkSWQpIHtcbiAgICByZXF1aXJlQm90R3VpbGRQZXJtaXNzaW9ucyhib3QsIGd1aWxkSWQsIFtcIkJBTl9NRU1CRVJTXCJdKTtcblxuICAgIHJldHVybiBhd2FpdCBnZXRCYW5zT2xkKGd1aWxkSWQpO1xuICB9O1xufVxuIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBLFNBQVMsMEJBQTBCLFFBQVEsbUJBQW1CLENBQUM7QUFFL0QsZUFBZSxTQUFTLE9BQU8sQ0FBQyxHQUFpQixFQUFFO0lBQ2pELE1BQU0sVUFBVSxHQUFHLEdBQUcsQ0FBQyxPQUFPLENBQUMsT0FBTyxBQUFDO0lBRXZDLEdBQUcsQ0FBQyxPQUFPLENBQUMsT0FBTyxHQUFHLGVBQWdCLE9BQU8sRUFBRTtRQUM3QywwQkFBMEIsQ0FBQyxHQUFHLEVBQUUsT0FBTyxFQUFFO1lBQUMsYUFBYTtTQUFDLENBQUMsQ0FBQztRQUUxRCxPQUFPLE1BQU0sVUFBVSxDQUFDLE9BQU8sQ0FBQyxDQUFDO0tBQ2xDLENBQUM7Q0FDSCxDQUFBIn0=

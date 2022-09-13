@@ -1,0 +1,11 @@
+import { requireBotGuildPermissions } from "../permissions.ts";
+export default function deleteRole(bot) {
+    const deleteRoleOld = bot.helpers.deleteRole;
+    bot.helpers.deleteRole = async function(guildId, id) {
+        requireBotGuildPermissions(bot, guildId, [
+            "MANAGE_ROLES"
+        ]);
+        return await deleteRoleOld(guildId, id);
+    };
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBCb3RXaXRoQ2FjaGUgfSBmcm9tIFwiLi4vLi4vZGVwcy50c1wiO1xuaW1wb3J0IHsgcmVxdWlyZUJvdEd1aWxkUGVybWlzc2lvbnMgfSBmcm9tIFwiLi4vcGVybWlzc2lvbnMudHNcIjtcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gZGVsZXRlUm9sZShib3Q6IEJvdFdpdGhDYWNoZSkge1xuICBjb25zdCBkZWxldGVSb2xlT2xkID0gYm90LmhlbHBlcnMuZGVsZXRlUm9sZTtcblxuICBib3QuaGVscGVycy5kZWxldGVSb2xlID0gYXN5bmMgZnVuY3Rpb24gKFxuICAgIGd1aWxkSWQsXG4gICAgaWQsXG4gICkge1xuICAgIHJlcXVpcmVCb3RHdWlsZFBlcm1pc3Npb25zKGJvdCwgZ3VpbGRJZCwgW1wiTUFOQUdFX1JPTEVTXCJdKTtcblxuICAgIHJldHVybiBhd2FpdCBkZWxldGVSb2xlT2xkKGd1aWxkSWQsIGlkKTtcbiAgfTtcbn1cbiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQSxTQUFTLDBCQUEwQixRQUFRLG1CQUFtQixDQUFDO0FBRS9ELGVBQWUsU0FBUyxVQUFVLENBQUMsR0FBaUIsRUFBRTtJQUNwRCxNQUFNLGFBQWEsR0FBRyxHQUFHLENBQUMsT0FBTyxDQUFDLFVBQVUsQUFBQztJQUU3QyxHQUFHLENBQUMsT0FBTyxDQUFDLFVBQVUsR0FBRyxlQUN2QixPQUFPLEVBQ1AsRUFBRSxFQUNGO1FBQ0EsMEJBQTBCLENBQUMsR0FBRyxFQUFFLE9BQU8sRUFBRTtZQUFDLGNBQWM7U0FBQyxDQUFDLENBQUM7UUFFM0QsT0FBTyxNQUFNLGFBQWEsQ0FBQyxPQUFPLEVBQUUsRUFBRSxDQUFDLENBQUM7S0FDekMsQ0FBQztDQUNILENBQUEifQ==

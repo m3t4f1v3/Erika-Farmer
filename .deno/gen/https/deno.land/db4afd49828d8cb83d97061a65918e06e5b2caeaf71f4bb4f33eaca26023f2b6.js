@@ -1,0 +1,2 @@
+export * from "./getApplicationInfo.ts";
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIiJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgKiBmcm9tIFwiLi9nZXRBcHBsaWNhdGlvbkluZm8udHNcIjtcbiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiY0FBYyx5QkFBeUIsQ0FBQyJ9

@@ -1,0 +1,29 @@
+import { Collection } from "../../util/collection.ts";
+/** Returns a list of integrations for the guild. Requires the MANAGE_GUILD permission. */ export async function getIntegrations(bot, guildId) {
+    const result = await bot.rest.runMethod(bot.rest, "GET", bot.constants.routes.GUILD_INTEGRATIONS(guildId));
+    return new Collection(result.map((res)=>{
+        const integration = bot.transformers.integration(bot, {
+            guild_id: guildId.toString(),
+            id: res.id,
+            name: res.name,
+            type: res.type,
+            enabled: res.enabled,
+            syncing: res.syncing,
+            role_id: res.role_id,
+            enable_emoticons: res.enable_emoticons,
+            expire_behavior: res.expire_behavior,
+            expire_grace_period: res.expire_grace_period,
+            user: res.user,
+            account: res.account,
+            synced_at: res.synced_at,
+            subscriber_count: res.subscriber_count,
+            revoked: res.revoked,
+            application: res.application
+        });
+        return [
+            integration.id,
+            integration
+        ];
+    }));
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgdHlwZSB7IEJvdCB9IGZyb20gXCIuLi8uLi9ib3QudHNcIjtcbmltcG9ydCB7IENvbGxlY3Rpb24gfSBmcm9tIFwiLi4vLi4vdXRpbC9jb2xsZWN0aW9uLnRzXCI7XG5pbXBvcnQgeyBEaXNjb3JkSW50ZWdyYXRpb24gfSBmcm9tIFwiLi4vLi4vdHlwZXMvZGlzY29yZC50c1wiO1xuXG4vKiogUmV0dXJucyBhIGxpc3Qgb2YgaW50ZWdyYXRpb25zIGZvciB0aGUgZ3VpbGQuIFJlcXVpcmVzIHRoZSBNQU5BR0VfR1VJTEQgcGVybWlzc2lvbi4gKi9cbmV4cG9ydCBhc3luYyBmdW5jdGlvbiBnZXRJbnRlZ3JhdGlvbnMoYm90OiBCb3QsIGd1aWxkSWQ6IGJpZ2ludCkge1xuICBjb25zdCByZXN1bHQgPSBhd2FpdCBib3QucmVzdC5ydW5NZXRob2Q8RGlzY29yZEludGVncmF0aW9uW10+KFxuICAgIGJvdC5yZXN0LFxuICAgIFwiR0VUXCIsXG4gICAgYm90LmNvbnN0YW50cy5yb3V0ZXMuR1VJTERfSU5URUdSQVRJT05TKGd1aWxkSWQpLFxuICApO1xuXG4gIHJldHVybiBuZXcgQ29sbGVjdGlvbihcbiAgICByZXN1bHQubWFwKChyZXMpID0+IHtcbiAgICAgIGNvbnN0IGludGVncmF0aW9uID0gYm90LnRyYW5zZm9ybWVycy5pbnRlZ3JhdGlvbihib3QsIHtcbiAgICAgICAgZ3VpbGRfaWQ6IGd1aWxkSWQudG9TdHJpbmcoKSxcbiAgICAgICAgaWQ6IHJlcy5pZCxcbiAgICAgICAgbmFtZTogcmVzLm5hbWUsXG4gICAgICAgIHR5cGU6IHJlcy50eXBlLFxuICAgICAgICBlbmFibGVkOiByZXMuZW5hYmxlZCxcbiAgICAgICAgc3luY2luZzogcmVzLnN5bmNpbmcsXG4gICAgICAgIHJvbGVfaWQ6IHJlcy5yb2xlX2lkLFxuICAgICAgICBlbmFibGVfZW1vdGljb25zOiByZXMuZW5hYmxlX2Vtb3RpY29ucyxcbiAgICAgICAgZXhwaXJlX2JlaGF2aW9yOiByZXMuZXhwaXJlX2JlaGF2aW9yLFxuICAgICAgICBleHBpcmVfZ3JhY2VfcGVyaW9kOiByZXMuZXhwaXJlX2dyYWNlX3BlcmlvZCxcbiAgICAgICAgdXNlcjogcmVzLnVzZXIsXG4gICAgICAgIGFjY291bnQ6IHJlcy5hY2NvdW50LFxuICAgICAgICBzeW5jZWRfYXQ6IHJlcy5zeW5jZWRfYXQsXG4gICAgICAgIHN1YnNjcmliZXJfY291bnQ6IHJlcy5zdWJzY3JpYmVyX2NvdW50LFxuICAgICAgICByZXZva2VkOiByZXMucmV2b2tlZCxcbiAgICAgICAgYXBwbGljYXRpb246IHJlcy5hcHBsaWNhdGlvbixcbiAgICAgIH0pO1xuICAgICAgcmV0dXJuIFtpbnRlZ3JhdGlvbi5pZCwgaW50ZWdyYXRpb25dO1xuICAgIH0pLFxuICApO1xufVxuIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBLFNBQVMsVUFBVSxRQUFRLDBCQUEwQixDQUFDO0FBR3RELDBGQUEwRixDQUMxRixPQUFPLGVBQWUsZUFBZSxDQUFDLEdBQVEsRUFBRSxPQUFlLEVBQUU7SUFDL0QsTUFBTSxNQUFNLEdBQUcsTUFBTSxHQUFHLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FDckMsR0FBRyxDQUFDLElBQUksRUFDUixLQUFLLEVBQ0wsR0FBRyxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQUMsa0JBQWtCLENBQUMsT0FBTyxDQUFDLENBQ2pELEFBQUM7SUFFRixPQUFPLElBQUksVUFBVSxDQUNuQixNQUFNLENBQUMsR0FBRyxDQUFDLENBQUMsR0FBRyxHQUFLO1FBQ2xCLE1BQU0sV0FBVyxHQUFHLEdBQUcsQ0FBQyxZQUFZLENBQUMsV0FBVyxDQUFDLEdBQUcsRUFBRTtZQUNwRCxRQUFRLEVBQUUsT0FBTyxDQUFDLFFBQVEsRUFBRTtZQUM1QixFQUFFLEVBQUUsR0FBRyxDQUFDLEVBQUU7WUFDVixJQUFJLEVBQUUsR0FBRyxDQUFDLElBQUk7WUFDZCxJQUFJLEVBQUUsR0FBRyxDQUFDLElBQUk7WUFDZCxPQUFPLEVBQUUsR0FBRyxDQUFDLE9BQU87WUFDcEIsT0FBTyxFQUFFLEdBQUcsQ0FBQyxPQUFPO1lBQ3BCLE9BQU8sRUFBRSxHQUFHLENBQUMsT0FBTztZQUNwQixnQkFBZ0IsRUFBRSxHQUFHLENBQUMsZ0JBQWdCO1lBQ3RDLGVBQWUsRUFBRSxHQUFHLENBQUMsZUFBZTtZQUNwQyxtQkFBbUIsRUFBRSxHQUFHLENBQUMsbUJBQW1CO1lBQzVDLElBQUksRUFBRSxHQUFHLENBQUMsSUFBSTtZQUNkLE9BQU8sRUFBRSxHQUFHLENBQUMsT0FBTztZQUNwQixTQUFTLEVBQUUsR0FBRyxDQUFDLFNBQVM7WUFDeEIsZ0JBQWdCLEVBQUUsR0FBRyxDQUFDLGdCQUFnQjtZQUN0QyxPQUFPLEVBQUUsR0FBRyxDQUFDLE9BQU87WUFDcEIsV0FBVyxFQUFFLEdBQUcsQ0FBQyxXQUFXO1NBQzdCLENBQUMsQUFBQztRQUNILE9BQU87WUFBQyxXQUFXLENBQUMsRUFBRTtZQUFFLFdBQVc7U0FBQyxDQUFDO0tBQ3RDLENBQUMsQ0FDSCxDQUFDO0NBQ0gifQ==

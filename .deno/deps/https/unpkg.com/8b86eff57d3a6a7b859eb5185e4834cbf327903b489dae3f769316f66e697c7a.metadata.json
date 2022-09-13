@@ -1,0 +1,24 @@
+{
+  "headers": {
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "x-content-type-options": "nosniff",
+    "fly-request-id": "01GCPBCK01H1D83SXG0FTYRA5X-sea",
+    "access-control-allow-origin": "*",
+    "vary": "Accept-Encoding",
+    "age": "64349",
+    "date": "Mon, 12 Sep 2022 07:13:57 GMT",
+    "cache-control": "public, max-age=31536000",
+    "cf-cache-status": "HIT",
+    "content-type": "application/javascript; charset=utf-8",
+    "via": "1.1 fly.io",
+    "server": "cloudflare",
+    "cf-ray": "7496d7ebe98a08e3-SEA",
+    "etag": "W/\"8943-2xroTL2Wm86OI3lEWKKnuJTI55c\"",
+    "last-modified": "Sat, 26 Oct 1985 08:15:00 GMT"
+  },
+  "url": "https://unpkg.com/@evan/wasm@0.0.93/target/ed25519/deno.js",
+  "now": {
+    "secs_since_epoch": 1662966837,
+    "nanos_since_epoch": 131853085
+  }
+}

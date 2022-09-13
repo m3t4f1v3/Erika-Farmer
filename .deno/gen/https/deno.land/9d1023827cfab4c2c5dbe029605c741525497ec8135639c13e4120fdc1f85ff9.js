@@ -1,0 +1,11 @@
+export default function deleteGuild(bot) {
+    const deleteGuildOld = bot.helpers.deleteGuild;
+    bot.helpers.deleteGuild = async function(guildId) {
+        const guild = bot.guilds.get(guildId);
+        if (guild && guild.ownerId !== bot.id) {
+            throw new Error("A bot can only delete a guild it owns.");
+        }
+        return await deleteGuildOld(guildId);
+    };
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBCb3RXaXRoQ2FjaGUgfSBmcm9tIFwiLi4vLi4vZGVwcy50c1wiO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBkZWxldGVHdWlsZChib3Q6IEJvdFdpdGhDYWNoZSkge1xuICBjb25zdCBkZWxldGVHdWlsZE9sZCA9IGJvdC5oZWxwZXJzLmRlbGV0ZUd1aWxkO1xuXG4gIGJvdC5oZWxwZXJzLmRlbGV0ZUd1aWxkID0gYXN5bmMgZnVuY3Rpb24gKGd1aWxkSWQpIHtcbiAgICBjb25zdCBndWlsZCA9IGJvdC5ndWlsZHMuZ2V0KGd1aWxkSWQpO1xuICAgIGlmIChndWlsZCAmJiBndWlsZC5vd25lcklkICE9PSBib3QuaWQpIHtcbiAgICAgIHRocm93IG5ldyBFcnJvcihcIkEgYm90IGNhbiBvbmx5IGRlbGV0ZSBhIGd1aWxkIGl0IG93bnMuXCIpO1xuICAgIH1cblxuICAgIHJldHVybiBhd2FpdCBkZWxldGVHdWlsZE9sZChndWlsZElkKTtcbiAgfTtcbn1cbiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQSxlQUFlLFNBQVMsV0FBVyxDQUFDLEdBQWlCLEVBQUU7SUFDckQsTUFBTSxjQUFjLEdBQUcsR0FBRyxDQUFDLE9BQU8sQ0FBQyxXQUFXLEFBQUM7SUFFL0MsR0FBRyxDQUFDLE9BQU8sQ0FBQyxXQUFXLEdBQUcsZUFBZ0IsT0FBTyxFQUFFO1FBQ2pELE1BQU0sS0FBSyxHQUFHLEdBQUcsQ0FBQyxNQUFNLENBQUMsR0FBRyxDQUFDLE9BQU8sQ0FBQyxBQUFDO1FBQ3RDLElBQUksS0FBSyxJQUFJLEtBQUssQ0FBQyxPQUFPLEtBQUssR0FBRyxDQUFDLEVBQUUsRUFBRTtZQUNyQyxNQUFNLElBQUksS0FBSyxDQUFDLHdDQUF3QyxDQUFDLENBQUM7U0FDM0Q7UUFFRCxPQUFPLE1BQU0sY0FBYyxDQUFDLE9BQU8sQ0FBQyxDQUFDO0tBQ3RDLENBQUM7Q0FDSCxDQUFBIn0=

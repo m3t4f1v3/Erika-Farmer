@@ -1,0 +1,26 @@
+{
+  "headers": {
+    "x-amz-replication-status": "FAILED",
+    "content-type": "application/typescript; charset=utf-8",
+    "content-length": "506",
+    "accept-ranges": "bytes",
+    "date": "Mon, 12 Sep 2022 07:13:58 GMT",
+    "x-amz-cf-pop": "SEA73-P1",
+    "x-amz-version-id": "YxsUKOJCn2fdtxAxjhmzsCC9iFPyUHXF",
+    "x-cache": "Miss from cloudfront",
+    "content-security-policy": "default-src 'none'; style-src 'unsafe-inline'; sandbox",
+    "access-control-allow-origin": "*",
+    "cache-control": "public, max-age=31536000, immutable",
+    "last-modified": "Sun, 29 May 2022 16:28:41 GMT",
+    "etag": "\"648feac886948feaf7eb956467727f57\"",
+    "via": "1.1 91356d2137f5a7345e93da4516c49ec4.cloudfront.net (CloudFront)",
+    "x-amz-cf-id": "aaE6D-ZoitjY2xY7pcVhrVSxsFnfipNgteF9h-mCqWHvztuKKQTeoQ==",
+    "server": "deno/us-west1-a",
+    "vary": "Accept-Encoding, Origin"
+  },
+  "url": "https://deno.land/x/discordeno@13.0.0-rc45/handlers/channels/STAGE_INSTANCE_CREATE.ts",
+  "now": {
+    "secs_since_epoch": 1662966837,
+    "nanos_since_epoch": 662953446
+  }
+}

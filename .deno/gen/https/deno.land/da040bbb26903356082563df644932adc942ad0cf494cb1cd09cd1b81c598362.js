@@ -1,0 +1,22 @@
+async function checkOffline(shard, highPriority) {
+    if (!shard.isOpen()) {
+        await new Promise((resolve)=>{
+            if (highPriority) {
+                // Higher priority requests get added at the beginning of the array.
+                shard.offlineSendQueue.unshift(resolve);
+            } else {
+                shard.offlineSendQueue.push(resolve);
+            }
+        });
+    }
+}
+export async function send(shard, message, highPriority) {
+    // Before acquiring a token from the bucket, check whether the shard is currently offline or not.
+    // Else bucket and token wait time just get wasted.
+    await checkOffline(shard, highPriority);
+    await shard.bucket.acquire(1, highPriority);
+    // It's possible, that the shard went offline after a token has been acquired from the bucket.
+    await checkOffline(shard, highPriority);
+    shard.socket?.send(JSON.stringify(message));
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBTaGFyZCwgU2hhcmRTb2NrZXRSZXF1ZXN0IH0gZnJvbSBcIi4vdHlwZXMudHNcIjtcblxuYXN5bmMgZnVuY3Rpb24gY2hlY2tPZmZsaW5lKHNoYXJkOiBTaGFyZCwgaGlnaFByaW9yaXR5OiBib29sZWFuKTogUHJvbWlzZTx2b2lkPiB7XG4gIGlmICghc2hhcmQuaXNPcGVuKCkpIHtcbiAgICBhd2FpdCBuZXcgUHJvbWlzZSgocmVzb2x2ZSkgPT4ge1xuICAgICAgaWYgKGhpZ2hQcmlvcml0eSkge1xuICAgICAgICAvLyBIaWdoZXIgcHJpb3JpdHkgcmVxdWVzdHMgZ2V0IGFkZGVkIGF0IHRoZSBiZWdpbm5pbmcgb2YgdGhlIGFycmF5LlxuICAgICAgICBzaGFyZC5vZmZsaW5lU2VuZFF1ZXVlLnVuc2hpZnQocmVzb2x2ZSk7XG4gICAgICB9IGVsc2Uge1xuICAgICAgICBzaGFyZC5vZmZsaW5lU2VuZFF1ZXVlLnB1c2gocmVzb2x2ZSk7XG4gICAgICB9XG4gICAgfSk7XG4gIH1cbn1cblxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIHNlbmQoc2hhcmQ6IFNoYXJkLCBtZXNzYWdlOiBTaGFyZFNvY2tldFJlcXVlc3QsIGhpZ2hQcmlvcml0eTogYm9vbGVhbik6IFByb21pc2U8dm9pZD4ge1xuICAvLyBCZWZvcmUgYWNxdWlyaW5nIGEgdG9rZW4gZnJvbSB0aGUgYnVja2V0LCBjaGVjayB3aGV0aGVyIHRoZSBzaGFyZCBpcyBjdXJyZW50bHkgb2ZmbGluZSBvciBub3QuXG4gIC8vIEVsc2UgYnVja2V0IGFuZCB0b2tlbiB3YWl0IHRpbWUganVzdCBnZXQgd2FzdGVkLlxuICBhd2FpdCBjaGVja09mZmxpbmUoc2hhcmQsIGhpZ2hQcmlvcml0eSk7XG5cbiAgYXdhaXQgc2hhcmQuYnVja2V0LmFjcXVpcmUoMSwgaGlnaFByaW9yaXR5KTtcblxuICAvLyBJdCdzIHBvc3NpYmxlLCB0aGF0IHRoZSBzaGFyZCB3ZW50IG9mZmxpbmUgYWZ0ZXIgYSB0b2tlbiBoYXMgYmVlbiBhY3F1aXJlZCBmcm9tIHRoZSBidWNrZXQuXG4gIGF3YWl0IGNoZWNrT2ZmbGluZShzaGFyZCwgaGlnaFByaW9yaXR5KTtcblxuICBzaGFyZC5zb2NrZXQ/LnNlbmQoSlNPTi5zdHJpbmdpZnkobWVzc2FnZSkpO1xufVxuIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBLGVBQWUsWUFBWSxDQUFDLEtBQVksRUFBRSxZQUFxQixFQUFpQjtJQUM5RSxJQUFJLENBQUMsS0FBSyxDQUFDLE1BQU0sRUFBRSxFQUFFO1FBQ25CLE1BQU0sSUFBSSxPQUFPLENBQUMsQ0FBQyxPQUFPLEdBQUs7WUFDN0IsSUFBSSxZQUFZLEVBQUU7Z0JBQ2hCLG9FQUFvRTtnQkFDcEUsS0FBSyxDQUFDLGdCQUFnQixDQUFDLE9BQU8sQ0FBQyxPQUFPLENBQUMsQ0FBQzthQUN6QyxNQUFNO2dCQUNMLEtBQUssQ0FBQyxnQkFBZ0IsQ0FBQyxJQUFJLENBQUMsT0FBTyxDQUFDLENBQUM7YUFDdEM7U0FDRixDQUFDLENBQUM7S0FDSjtDQUNGO0FBRUQsT0FBTyxlQUFlLElBQUksQ0FBQyxLQUFZLEVBQUUsT0FBMkIsRUFBRSxZQUFxQixFQUFpQjtJQUMxRyxpR0FBaUc7SUFDakcsbURBQW1EO0lBQ25ELE1BQU0sWUFBWSxDQUFDLEtBQUssRUFBRSxZQUFZLENBQUMsQ0FBQztJQUV4QyxNQUFNLEtBQUssQ0FBQyxNQUFNLENBQUMsT0FBTyxDQUFDLENBQUMsRUFBRSxZQUFZLENBQUMsQ0FBQztJQUU1Qyw4RkFBOEY7SUFDOUYsTUFBTSxZQUFZLENBQUMsS0FBSyxFQUFFLFlBQVksQ0FBQyxDQUFDO0lBRXhDLEtBQUssQ0FBQyxNQUFNLEVBQUUsSUFBSSxDQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsT0FBTyxDQUFDLENBQUMsQ0FBQztDQUM3QyJ9

@@ -1,0 +1,26 @@
+{
+  "headers": {
+    "cache-control": "public, max-age=31536000, immutable",
+    "etag": "\"c5a3cd6566370397f1c24380a0b8e53a\"",
+    "x-cache": "Miss from cloudfront",
+    "date": "Mon, 12 Sep 2022 07:13:58 GMT",
+    "content-type": "application/typescript; charset=utf-8",
+    "content-security-policy": "default-src 'none'; style-src 'unsafe-inline'; sandbox",
+    "access-control-allow-origin": "*",
+    "server": "deno/us-west1-a",
+    "accept-ranges": "bytes",
+    "x-amz-replication-status": "FAILED",
+    "content-length": "576",
+    "last-modified": "Sun, 29 May 2022 16:28:41 GMT",
+    "x-amz-cf-pop": "SEA73-P1",
+    "x-amz-version-id": "0x4nZFW9Z6hRkp5OKT8RJsmPVCbiSgBw",
+    "vary": "Accept-Encoding, Origin",
+    "via": "1.1 91356d2137f5a7345e93da4516c49ec4.cloudfront.net (CloudFront)",
+    "x-amz-cf-id": "CRbuyLwOYq0Q0Kh9x8Zs_bOqnxIGW86CxXZZ39jIhW2aGHPvFhQRAQ=="
+  },
+  "url": "https://deno.land/x/discordeno@13.0.0-rc45/handlers/channels/CHANNEL_PINS_UPDATE.ts",
+  "now": {
+    "secs_since_epoch": 1662966837,
+    "nanos_since_epoch": 655459627
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "headers": {
+    "cache-control": "public, max-age=31536000, immutable",
+    "content-type": "application/typescript; charset=utf-8",
+    "content-security-policy": "default-src 'none'; style-src 'unsafe-inline'; sandbox",
+    "etag": "\"87544ce2837459b8a6d00d1b630d5abf\"",
+    "x-amz-replication-status": "FAILED",
+    "content-length": "1669",
+    "access-control-allow-origin": "*",
+    "accept-ranges": "bytes",
+    "x-cache": "Miss from cloudfront",
+    "vary": "Accept-Encoding, Origin",
+    "last-modified": "Sun, 29 May 2022 16:28:42 GMT",
+    "x-amz-version-id": "wKQ5OKG9pFeD2QeGa1mSkT3cqWDiD7pk",
+    "server": "deno/us-west1-a",
+    "x-amz-cf-id": "1i_dTbIyCrtjFIqMaYS2nryFJdGHPM76eviVepzvJ1FpPrz1_a5tsQ==",
+    "via": "1.1 91356d2137f5a7345e93da4516c49ec4.cloudfront.net (CloudFront)",
+    "x-amz-cf-pop": "SEA73-P1",
+    "date": "Mon, 12 Sep 2022 07:13:57 GMT"
+  },
+  "url": "https://deno.land/x/discordeno@13.0.0-rc45/plugins/permissions/src/interactions/editFollowupMessage.ts",
+  "now": {
+    "secs_since_epoch": 1662966837,
+    "nanos_since_epoch": 15557015
+  }
+}

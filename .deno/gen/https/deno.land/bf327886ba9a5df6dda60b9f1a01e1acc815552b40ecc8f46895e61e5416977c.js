@@ -1,0 +1,2 @@
+export * from "./GUILD_EMOJIS_UPDATE.ts";
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIiJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgKiBmcm9tIFwiLi9HVUlMRF9FTU9KSVNfVVBEQVRFLnRzXCI7XG4iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6ImNBQWMsMEJBQTBCLENBQUMifQ==

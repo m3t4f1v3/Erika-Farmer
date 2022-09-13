@@ -1,0 +1,26 @@
+{
+  "headers": {
+    "via": "1.1 91356d2137f5a7345e93da4516c49ec4.cloudfront.net (CloudFront)",
+    "x-amz-version-id": "NNOThx90nfTWde0NlJkFokz2H6HlKYkE",
+    "date": "Mon, 12 Sep 2022 07:13:58 GMT",
+    "last-modified": "Sun, 29 May 2022 16:28:42 GMT",
+    "content-type": "application/typescript; charset=utf-8",
+    "x-cache": "Miss from cloudfront",
+    "cache-control": "public, max-age=31536000, immutable",
+    "content-security-policy": "default-src 'none'; style-src 'unsafe-inline'; sandbox",
+    "x-amz-replication-status": "FAILED",
+    "vary": "Accept-Encoding, Origin",
+    "x-amz-cf-pop": "SEA73-P1",
+    "etag": "\"c17b70b33000fcbab24cd6081e9108b7\"",
+    "x-amz-cf-id": "iYAg2zypbM5IHhkcqr99gARkqUSAImtpSurbTVV5rBkxNyYaOhmtYw==",
+    "accept-ranges": "bytes",
+    "access-control-allow-origin": "*",
+    "server": "deno/us-west1-a",
+    "content-length": "388"
+  },
+  "url": "https://deno.land/x/discordeno@13.0.0-rc45/helpers/invites/deleteInvite.ts",
+  "now": {
+    "secs_since_epoch": 1662966837,
+    "nanos_since_epoch": 610736521
+  }
+}

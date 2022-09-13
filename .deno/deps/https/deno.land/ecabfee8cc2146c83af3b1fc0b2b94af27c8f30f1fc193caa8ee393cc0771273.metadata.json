@@ -1,0 +1,26 @@
+{
+  "headers": {
+    "etag": "\"142f192a44aed74d1c92e190c5728497\"",
+    "content-security-policy": "default-src 'none'; style-src 'unsafe-inline'; sandbox",
+    "x-amz-version-id": "wsvPslcFbz5iyPGeVd6Pg8BU8r0U0NL5",
+    "content-type": "application/typescript; charset=utf-8",
+    "x-cache": "Miss from cloudfront",
+    "date": "Mon, 12 Sep 2022 07:13:57 GMT",
+    "server": "deno/us-west1-a",
+    "vary": "Accept-Encoding, Origin",
+    "via": "1.1 91356d2137f5a7345e93da4516c49ec4.cloudfront.net (CloudFront)",
+    "last-modified": "Sun, 29 May 2022 16:28:43 GMT",
+    "content-length": "1222",
+    "x-amz-replication-status": "FAILED",
+    "x-amz-cf-pop": "SEA73-P1",
+    "accept-ranges": "bytes",
+    "access-control-allow-origin": "*",
+    "cache-control": "public, max-age=31536000, immutable",
+    "x-amz-cf-id": "rGpWM33Ppn0eXrv3W79y911ajYRzZ7XK4rpPXQrJLa6aVjXNMNwcvw=="
+  },
+  "url": "https://deno.land/x/discordeno@13.0.0-rc45/transformers/applicationCommand.ts",
+  "now": {
+    "secs_since_epoch": 1662966836,
+    "nanos_since_epoch": 822423122
+  }
+}

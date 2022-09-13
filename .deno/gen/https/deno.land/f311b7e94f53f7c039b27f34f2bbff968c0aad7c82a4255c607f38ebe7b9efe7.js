@@ -1,0 +1,11 @@
+/** Validates the length of a string in JS. Certain characters in JS can have multiple numbers in length in unicode and discords api is in python which treats length differently. */ export function validateLength(text, options) {
+    const length = [
+        ...text
+    ].length;
+    // Text is too long
+    if (options.max && length > options.max) return false;
+    // Text is too short
+    if (options.min && length < options.min) return false;
+    return true;
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIiJdLCJzb3VyY2VzQ29udGVudCI6WyIvKiogVmFsaWRhdGVzIHRoZSBsZW5ndGggb2YgYSBzdHJpbmcgaW4gSlMuIENlcnRhaW4gY2hhcmFjdGVycyBpbiBKUyBjYW4gaGF2ZSBtdWx0aXBsZSBudW1iZXJzIGluIGxlbmd0aCBpbiB1bmljb2RlIGFuZCBkaXNjb3JkcyBhcGkgaXMgaW4gcHl0aG9uIHdoaWNoIHRyZWF0cyBsZW5ndGggZGlmZmVyZW50bHkuICovXG5leHBvcnQgZnVuY3Rpb24gdmFsaWRhdGVMZW5ndGgodGV4dDogc3RyaW5nLCBvcHRpb25zOiB7IG1heD86IG51bWJlcjsgbWluPzogbnVtYmVyIH0pIHtcbiAgY29uc3QgbGVuZ3RoID0gWy4uLnRleHRdLmxlbmd0aDtcblxuICAvLyBUZXh0IGlzIHRvbyBsb25nXG4gIGlmIChvcHRpb25zLm1heCAmJiBsZW5ndGggPiBvcHRpb25zLm1heCkgcmV0dXJuIGZhbHNlO1xuICAvLyBUZXh0IGlzIHRvbyBzaG9ydFxuICBpZiAob3B0aW9ucy5taW4gJiYgbGVuZ3RoIDwgb3B0aW9ucy5taW4pIHJldHVybiBmYWxzZTtcblxuICByZXR1cm4gdHJ1ZTtcbn1cbiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoicUxBQXFMLENBQ3JMLE9BQU8sU0FBUyxjQUFjLENBQUMsSUFBWSxFQUFFLE9BQXVDLEVBQUU7SUFDcEYsTUFBTSxNQUFNLEdBQUc7V0FBSSxJQUFJO0tBQUMsQ0FBQyxNQUFNLEFBQUM7SUFFaEMsbUJBQW1CO0lBQ25CLElBQUksT0FBTyxDQUFDLEdBQUcsSUFBSSxNQUFNLEdBQUcsT0FBTyxDQUFDLEdBQUcsRUFBRSxPQUFPLEtBQUssQ0FBQztJQUN0RCxvQkFBb0I7SUFDcEIsSUFBSSxPQUFPLENBQUMsR0FBRyxJQUFJLE1BQU0sR0FBRyxPQUFPLENBQUMsR0FBRyxFQUFFLE9BQU8sS0FBSyxDQUFDO0lBRXRELE9BQU8sSUFBSSxDQUFDO0NBQ2IifQ==

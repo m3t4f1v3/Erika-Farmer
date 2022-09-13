@@ -1,0 +1,5 @@
+export * from "https://deno.land/x/discordeno@13.0.0-rc45/mod.ts";
+export * from "https://deno.land/x/discordeno@13.0.0-rc45/plugins/mod.ts";
+// Terminal Colors!
+export * from "https://deno.land/std@0.117.0/fmt/colors.ts";
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIiJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgKiBmcm9tIFwiaHR0cHM6Ly9kZW5vLmxhbmQveC9kaXNjb3JkZW5vQDEzLjAuMC1yYzQ1L21vZC50c1wiO1xuZXhwb3J0ICogZnJvbSBcImh0dHBzOi8vZGVuby5sYW5kL3gvZGlzY29yZGVub0AxMy4wLjAtcmM0NS9wbHVnaW5zL21vZC50c1wiO1xuXG4vLyBUZXJtaW5hbCBDb2xvcnMhXG5leHBvcnQgKiBmcm9tIFwiaHR0cHM6Ly9kZW5vLmxhbmQvc3RkQDAuMTE3LjAvZm10L2NvbG9ycy50c1wiO1xuIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJjQUFjLG1EQUFtRCxDQUFDO0FBQ2xFLGNBQWMsMkRBQTJELENBQUM7QUFFMUUsbUJBQW1CO0FBQ25CLGNBQWMsNkNBQTZDLENBQUMifQ==

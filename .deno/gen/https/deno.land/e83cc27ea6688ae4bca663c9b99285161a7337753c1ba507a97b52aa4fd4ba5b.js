@@ -1,0 +1,14 @@
+import { requireBotChannelPermissions } from "../permissions.ts";
+export default function editChannelOverwrite(bot) {
+    const editChannelOverwriteOld = bot.helpers.editChannelOverwrite;
+    bot.helpers.editChannelOverwrite = async function(channelId, overwrite) {
+        const channel = bot.channels.get(channelId);
+        if (channel?.guildId) {
+            requireBotChannelPermissions(bot, channelId, [
+                "MANAGE_ROLES"
+            ]);
+        }
+        return await editChannelOverwriteOld(channelId, overwrite);
+    };
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBCb3RXaXRoQ2FjaGUgfSBmcm9tIFwiLi4vLi4vZGVwcy50c1wiO1xuaW1wb3J0IHsgcmVxdWlyZUJvdENoYW5uZWxQZXJtaXNzaW9ucyB9IGZyb20gXCIuLi9wZXJtaXNzaW9ucy50c1wiO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBlZGl0Q2hhbm5lbE92ZXJ3cml0ZShib3Q6IEJvdFdpdGhDYWNoZSkge1xuICBjb25zdCBlZGl0Q2hhbm5lbE92ZXJ3cml0ZU9sZCA9IGJvdC5oZWxwZXJzLmVkaXRDaGFubmVsT3ZlcndyaXRlO1xuXG4gIGJvdC5oZWxwZXJzLmVkaXRDaGFubmVsT3ZlcndyaXRlID0gYXN5bmMgZnVuY3Rpb24gKGNoYW5uZWxJZCwgb3ZlcndyaXRlKSB7XG4gICAgY29uc3QgY2hhbm5lbCA9IGJvdC5jaGFubmVscy5nZXQoY2hhbm5lbElkKTtcbiAgICBpZiAoY2hhbm5lbD8uZ3VpbGRJZCkge1xuICAgICAgcmVxdWlyZUJvdENoYW5uZWxQZXJtaXNzaW9ucyhib3QsIGNoYW5uZWxJZCwgW1wiTUFOQUdFX1JPTEVTXCJdKTtcbiAgICB9XG5cbiAgICByZXR1cm4gYXdhaXQgZWRpdENoYW5uZWxPdmVyd3JpdGVPbGQoY2hhbm5lbElkLCBvdmVyd3JpdGUpO1xuICB9O1xufVxuIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBLFNBQVMsNEJBQTRCLFFBQVEsbUJBQW1CLENBQUM7QUFFakUsZUFBZSxTQUFTLG9CQUFvQixDQUFDLEdBQWlCLEVBQUU7SUFDOUQsTUFBTSx1QkFBdUIsR0FBRyxHQUFHLENBQUMsT0FBTyxDQUFDLG9CQUFvQixBQUFDO0lBRWpFLEdBQUcsQ0FBQyxPQUFPLENBQUMsb0JBQW9CLEdBQUcsZUFBZ0IsU0FBUyxFQUFFLFNBQVMsRUFBRTtRQUN2RSxNQUFNLE9BQU8sR0FBRyxHQUFHLENBQUMsUUFBUSxDQUFDLEdBQUcsQ0FBQyxTQUFTLENBQUMsQUFBQztRQUM1QyxJQUFJLE9BQU8sRUFBRSxPQUFPLEVBQUU7WUFDcEIsNEJBQTRCLENBQUMsR0FBRyxFQUFFLFNBQVMsRUFBRTtnQkFBQyxjQUFjO2FBQUMsQ0FBQyxDQUFDO1NBQ2hFO1FBRUQsT0FBTyxNQUFNLHVCQUF1QixDQUFDLFNBQVMsRUFBRSxTQUFTLENBQUMsQ0FBQztLQUM1RCxDQUFDO0NBQ0gsQ0FBQSJ9

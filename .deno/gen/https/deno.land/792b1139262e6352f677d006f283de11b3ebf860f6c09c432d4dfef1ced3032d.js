@@ -1,0 +1,4 @@
+/** Creates a url to the emoji from the Discord CDN. */ export function emojiUrl(bot, id, animated = false) {
+    return `https://cdn.discordapp.com/emojis/${id}.${animated ? "gif" : "png"}`;
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBCb3QgfSBmcm9tIFwiLi4vLi4vYm90LnRzXCI7XG5cbi8qKiBDcmVhdGVzIGEgdXJsIHRvIHRoZSBlbW9qaSBmcm9tIHRoZSBEaXNjb3JkIENETi4gKi9cbmV4cG9ydCBmdW5jdGlvbiBlbW9qaVVybChib3Q6IEJvdCwgaWQ6IGJpZ2ludCwgYW5pbWF0ZWQgPSBmYWxzZSkge1xuICByZXR1cm4gYGh0dHBzOi8vY2RuLmRpc2NvcmRhcHAuY29tL2Vtb2ppcy8ke2lkfS4ke2FuaW1hdGVkID8gXCJnaWZcIiA6IFwicG5nXCJ9YDtcbn1cbiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQSx1REFBdUQsQ0FDdkQsT0FBTyxTQUFTLFFBQVEsQ0FBQyxHQUFRLEVBQUUsRUFBVSxFQUFFLFFBQVEsR0FBRyxLQUFLLEVBQUU7SUFDL0QsT0FBTyxDQUFDLGtDQUFrQyxFQUFFLEVBQUUsQ0FBQyxDQUFDLEVBQUUsUUFBUSxHQUFHLEtBQUssR0FBRyxLQUFLLENBQUMsQ0FBQyxDQUFDO0NBQzlFIn0=

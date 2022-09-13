@@ -1,0 +1,11 @@
+import { requireBotGuildPermissions } from "../permissions.ts";
+export default function getVanityUrl(bot) {
+    const getVanityUrlOld = bot.helpers.getVanityUrl;
+    bot.helpers.getVanityUrl = async function(guildId) {
+        requireBotGuildPermissions(bot, guildId, [
+            "MANAGE_GUILD"
+        ]);
+        return await getVanityUrlOld(guildId);
+    };
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBCb3RXaXRoQ2FjaGUgfSBmcm9tIFwiLi4vLi4vZGVwcy50c1wiO1xuaW1wb3J0IHsgcmVxdWlyZUJvdEd1aWxkUGVybWlzc2lvbnMgfSBmcm9tIFwiLi4vcGVybWlzc2lvbnMudHNcIjtcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gZ2V0VmFuaXR5VXJsKGJvdDogQm90V2l0aENhY2hlKSB7XG4gIGNvbnN0IGdldFZhbml0eVVybE9sZCA9IGJvdC5oZWxwZXJzLmdldFZhbml0eVVybDtcblxuICBib3QuaGVscGVycy5nZXRWYW5pdHlVcmwgPSBhc3luYyBmdW5jdGlvbiAoZ3VpbGRJZCkge1xuICAgIHJlcXVpcmVCb3RHdWlsZFBlcm1pc3Npb25zKGJvdCwgZ3VpbGRJZCwgW1wiTUFOQUdFX0dVSUxEXCJdKTtcblxuICAgIHJldHVybiBhd2FpdCBnZXRWYW5pdHlVcmxPbGQoZ3VpbGRJZCk7XG4gIH07XG59XG4iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0EsU0FBUywwQkFBMEIsUUFBUSxtQkFBbUIsQ0FBQztBQUUvRCxlQUFlLFNBQVMsWUFBWSxDQUFDLEdBQWlCLEVBQUU7SUFDdEQsTUFBTSxlQUFlLEdBQUcsR0FBRyxDQUFDLE9BQU8sQ0FBQyxZQUFZLEFBQUM7SUFFakQsR0FBRyxDQUFDLE9BQU8sQ0FBQyxZQUFZLEdBQUcsZUFBZ0IsT0FBTyxFQUFFO1FBQ2xELDBCQUEwQixDQUFDLEdBQUcsRUFBRSxPQUFPLEVBQUU7WUFBQyxjQUFjO1NBQUMsQ0FBQyxDQUFDO1FBRTNELE9BQU8sTUFBTSxlQUFlLENBQUMsT0FBTyxDQUFDLENBQUM7S0FDdkMsQ0FBQztDQUNILENBQUEifQ==

@@ -1,0 +1,14 @@
+import { requireBotChannelPermissions } from "../permissions.ts";
+export default function getChannelWebhooks(bot) {
+    const getChannelWebhooksOld = bot.helpers.getChannelWebhooks;
+    bot.helpers.getChannelWebhooks = async function(channelId) {
+        const channel = bot.channels.get(channelId);
+        if (channel?.guildId) {
+            requireBotChannelPermissions(bot, channelId, [
+                "MANAGE_WEBHOOKS"
+            ]);
+        }
+        return await getChannelWebhooksOld(channelId);
+    };
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBCb3RXaXRoQ2FjaGUgfSBmcm9tIFwiLi4vLi4vZGVwcy50c1wiO1xuaW1wb3J0IHsgcmVxdWlyZUJvdENoYW5uZWxQZXJtaXNzaW9ucyB9IGZyb20gXCIuLi9wZXJtaXNzaW9ucy50c1wiO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBnZXRDaGFubmVsV2ViaG9va3MoYm90OiBCb3RXaXRoQ2FjaGUpIHtcbiAgY29uc3QgZ2V0Q2hhbm5lbFdlYmhvb2tzT2xkID0gYm90LmhlbHBlcnMuZ2V0Q2hhbm5lbFdlYmhvb2tzO1xuXG4gIGJvdC5oZWxwZXJzLmdldENoYW5uZWxXZWJob29rcyA9IGFzeW5jIGZ1bmN0aW9uIChjaGFubmVsSWQpIHtcbiAgICBjb25zdCBjaGFubmVsID0gYm90LmNoYW5uZWxzLmdldChjaGFubmVsSWQpO1xuICAgIGlmIChjaGFubmVsPy5ndWlsZElkKSB7XG4gICAgICByZXF1aXJlQm90Q2hhbm5lbFBlcm1pc3Npb25zKGJvdCwgY2hhbm5lbElkLCBbXCJNQU5BR0VfV0VCSE9PS1NcIl0pO1xuICAgIH1cblxuICAgIHJldHVybiBhd2FpdCBnZXRDaGFubmVsV2ViaG9va3NPbGQoY2hhbm5lbElkKTtcbiAgfTtcbn1cbiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQSxTQUFTLDRCQUE0QixRQUFRLG1CQUFtQixDQUFDO0FBRWpFLGVBQWUsU0FBUyxrQkFBa0IsQ0FBQyxHQUFpQixFQUFFO0lBQzVELE1BQU0scUJBQXFCLEdBQUcsR0FBRyxDQUFDLE9BQU8sQ0FBQyxrQkFBa0IsQUFBQztJQUU3RCxHQUFHLENBQUMsT0FBTyxDQUFDLGtCQUFrQixHQUFHLGVBQWdCLFNBQVMsRUFBRTtRQUMxRCxNQUFNLE9BQU8sR0FBRyxHQUFHLENBQUMsUUFBUSxDQUFDLEdBQUcsQ0FBQyxTQUFTLENBQUMsQUFBQztRQUM1QyxJQUFJLE9BQU8sRUFBRSxPQUFPLEVBQUU7WUFDcEIsNEJBQTRCLENBQUMsR0FBRyxFQUFFLFNBQVMsRUFBRTtnQkFBQyxpQkFBaUI7YUFBQyxDQUFDLENBQUM7U0FDbkU7UUFFRCxPQUFPLE1BQU0scUJBQXFCLENBQUMsU0FBUyxDQUFDLENBQUM7S0FDL0MsQ0FBQztDQUNILENBQUEifQ==

@@ -1,0 +1,26 @@
+{
+  "headers": {
+    "date": "Mon, 12 Sep 2022 07:13:58 GMT",
+    "x-cache": "Miss from cloudfront",
+    "last-modified": "Sun, 29 May 2022 16:28:41 GMT",
+    "x-amz-cf-id": "wwWT4toY4Rj61g3Cn4fkXFOT9KddH15Y_02VMM8ad2iAD8h4CCUFGQ==",
+    "via": "1.1 91356d2137f5a7345e93da4516c49ec4.cloudfront.net (CloudFront)",
+    "x-amz-version-id": "IJjwBol9qRZBACXPw0y7sELunlU8B4tL",
+    "cache-control": "public, max-age=31536000, immutable",
+    "content-type": "application/typescript; charset=utf-8",
+    "vary": "Accept-Encoding, Origin",
+    "server": "deno/us-west1-a",
+    "content-security-policy": "default-src 'none'; style-src 'unsafe-inline'; sandbox",
+    "accept-ranges": "bytes",
+    "content-length": "541",
+    "x-amz-replication-status": "FAILED",
+    "access-control-allow-origin": "*",
+    "x-amz-cf-pop": "SEA73-P1",
+    "etag": "\"f0f2b020f51ceb8d1a2132b1e165a58d\""
+  },
+  "url": "https://deno.land/x/discordeno@13.0.0-rc45/handlers/emojis/GUILD_EMOJIS_UPDATE.ts",
+  "now": {
+    "secs_since_epoch": 1662966837,
+    "nanos_since_epoch": 614848621
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "headers": {
+    "x-amz-replication-status": "FAILED",
+    "x-amz-version-id": "lFjdZ2CHDGtWf0uU4FGs3ETP.twZUlmc",
+    "content-length": "381",
+    "cache-control": "public, max-age=31536000, immutable",
+    "content-type": "application/typescript; charset=utf-8",
+    "x-amz-cf-pop": "SEA73-P1",
+    "etag": "\"6369698ce492665e435efc512e1dc4e5\"",
+    "content-security-policy": "default-src 'none'; style-src 'unsafe-inline'; sandbox",
+    "age": "229822",
+    "via": "1.1 91356d2137f5a7345e93da4516c49ec4.cloudfront.net (CloudFront)",
+    "date": "Fri, 09 Sep 2022 15:23:36 GMT",
+    "x-cache": "Hit from cloudfront",
+    "accept-ranges": "bytes",
+    "vary": "Accept-Encoding, Origin",
+    "x-amz-cf-id": "1x7qi0TxLPw_xfkkwwOMuxt-CLBSUxJWCEiIys4V1hwNMywMkZJe1g==",
+    "last-modified": "Sun, 29 May 2022 16:28:41 GMT",
+    "access-control-allow-origin": "*",
+    "server": "deno/us-west1-a"
+  },
+  "url": "https://deno.land/x/discordeno@13.0.0-rc45/handlers/guilds/scheduledEvents/GUILD_SCHEDULED_EVENT_CREATE.ts",
+  "now": {
+    "secs_since_epoch": 1662966837,
+    "nanos_since_epoch": 52215641
+  }
+}

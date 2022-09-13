@@ -1,0 +1,11 @@
+export default function joinThread(bot) {
+    const joinThreadOld = bot.helpers.joinThread;
+    bot.helpers.joinThread = async function(threadId) {
+        const channel = bot.channels.get(threadId);
+        if (channel && !channel.archived) {
+            throw new Error("You can not join an archived channel.");
+        }
+        return await joinThreadOld(threadId);
+    };
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBCb3RXaXRoQ2FjaGUgfSBmcm9tIFwiLi4vLi4vLi4vZGVwcy50c1wiO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBqb2luVGhyZWFkKGJvdDogQm90V2l0aENhY2hlKSB7XG4gIGNvbnN0IGpvaW5UaHJlYWRPbGQgPSBib3QuaGVscGVycy5qb2luVGhyZWFkO1xuXG4gIGJvdC5oZWxwZXJzLmpvaW5UaHJlYWQgPSBhc3luYyBmdW5jdGlvbiAodGhyZWFkSWQpIHtcbiAgICBjb25zdCBjaGFubmVsID0gYm90LmNoYW5uZWxzLmdldCh0aHJlYWRJZCk7XG5cbiAgICBpZiAoY2hhbm5lbCAmJiAhY2hhbm5lbC5hcmNoaXZlZCkge1xuICAgICAgdGhyb3cgbmV3IEVycm9yKFwiWW91IGNhbiBub3Qgam9pbiBhbiBhcmNoaXZlZCBjaGFubmVsLlwiKTtcbiAgICB9XG5cbiAgICByZXR1cm4gYXdhaXQgam9pblRocmVhZE9sZCh0aHJlYWRJZCk7XG4gIH07XG59XG4iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUEsZUFBZSxTQUFTLFVBQVUsQ0FBQyxHQUFpQixFQUFFO0lBQ3BELE1BQU0sYUFBYSxHQUFHLEdBQUcsQ0FBQyxPQUFPLENBQUMsVUFBVSxBQUFDO0lBRTdDLEdBQUcsQ0FBQyxPQUFPLENBQUMsVUFBVSxHQUFHLGVBQWdCLFFBQVEsRUFBRTtRQUNqRCxNQUFNLE9BQU8sR0FBRyxHQUFHLENBQUMsUUFBUSxDQUFDLEdBQUcsQ0FBQyxRQUFRLENBQUMsQUFBQztRQUUzQyxJQUFJLE9BQU8sSUFBSSxDQUFDLE9BQU8sQ0FBQyxRQUFRLEVBQUU7WUFDaEMsTUFBTSxJQUFJLEtBQUssQ0FBQyx1Q0FBdUMsQ0FBQyxDQUFDO1NBQzFEO1FBRUQsT0FBTyxNQUFNLGFBQWEsQ0FBQyxRQUFRLENBQUMsQ0FBQztLQUN0QyxDQUFDO0NBQ0gsQ0FBQSJ9

@@ -1,0 +1,26 @@
+{
+  "headers": {
+    "content-security-policy": "default-src 'none'; style-src 'unsafe-inline'; sandbox",
+    "last-modified": "Sun, 29 May 2022 16:28:41 GMT",
+    "content-type": "application/typescript; charset=utf-8",
+    "server": "deno/us-west1-a",
+    "x-amz-version-id": "MRg_5RpdKk8h9cYc8qIlT2A0RQ7kZPRu",
+    "content-length": "817",
+    "date": "Mon, 12 Sep 2022 07:13:58 GMT",
+    "vary": "Accept-Encoding, Origin",
+    "x-amz-replication-status": "FAILED",
+    "via": "1.1 91356d2137f5a7345e93da4516c49ec4.cloudfront.net (CloudFront)",
+    "accept-ranges": "bytes",
+    "x-cache": "Miss from cloudfront",
+    "cache-control": "public, max-age=31536000, immutable",
+    "access-control-allow-origin": "*",
+    "x-amz-cf-id": "Vz9cN1wKexju9XNSu9ffAp9DYGOt9-No7yfb9eTFBGy5UFZdaep2jA==",
+    "x-amz-cf-pop": "SEA73-P1",
+    "etag": "\"93fc4205d22b1db72c6aae65f76c0290\""
+  },
+  "url": "https://deno.land/x/discordeno@13.0.0-rc45/handlers/channels/THREAD_LIST_SYNC.ts",
+  "now": {
+    "secs_since_epoch": 1662966837,
+    "nanos_since_epoch": 513904730
+  }
+}

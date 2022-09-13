@@ -1,0 +1,27 @@
+{
+  "headers": {
+    "accept-ranges": "bytes",
+    "cache-control": "public, max-age=31536000, immutable",
+    "date": "Fri, 09 Sep 2022 15:23:35 GMT",
+    "x-amz-cf-id": "2IQ8IiKwFkfnaTVhMX8eiyz26MDBgXToRCYSm7ST-0jNU6zttbfIVQ==",
+    "x-amz-version-id": "mEsHJzrzc0ibBgyhHc6_clH271xb3ZUK",
+    "age": "229823",
+    "x-cache": "Hit from cloudfront",
+    "etag": "\"83a4f982c7fa8d58235f66fa489d81b1\"",
+    "via": "1.1 91356d2137f5a7345e93da4516c49ec4.cloudfront.net (CloudFront)",
+    "content-length": "698",
+    "content-type": "application/typescript; charset=utf-8",
+    "x-amz-replication-status": "FAILED",
+    "content-security-policy": "default-src 'none'; style-src 'unsafe-inline'; sandbox",
+    "vary": "Accept-Encoding, Origin",
+    "access-control-allow-origin": "*",
+    "last-modified": "Sun, 29 May 2022 16:28:42 GMT",
+    "x-amz-cf-pop": "SEA73-P1",
+    "server": "deno/us-west1-a"
+  },
+  "url": "https://deno.land/x/discordeno@13.0.0-rc45/handlers/messages/MESSAGE_DELETE_BULK.ts",
+  "now": {
+    "secs_since_epoch": 1662966837,
+    "nanos_since_epoch": 504786121
+  }
+}
