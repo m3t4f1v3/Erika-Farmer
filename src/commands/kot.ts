@@ -7,15 +7,15 @@ import {
 } from "../../deps.ts";
 
 import { createCommand } from "./mod.ts";
-import { feetImages } from "../../configs.ts";
-import { choose } from "../utils/sharedFunctions.ts";
 
 createCommand({
-  name: "feet",
-  description: "Erika will send an anime feet picture from a list curated by hand",
+  name: "kot",
+  description:
+    "Erika will send you a picture of an irl neko (cat) thinking of her master Bernkastel",
   type: ApplicationCommandTypes.ChatInput,
   execute: async (Bot, interaction) => {
     var extension;
+    var personToHug;
     if (iconBigintToHash(interaction.user.avatar!).startsWith("a_")) {
       extension = ".gif";
     }
@@ -29,16 +29,16 @@ createCommand({
             author: {
               name: interaction.user.username,
               url:
-                "https://beato-has-your-ip.cbase.repl.co/",
+                "https://static.wikia.nocookie.net/topstrongest/images/7/77/Bern_Cat.png/revision/latest/scale-to-width-down/350?cb=20200820165917",
               iconUrl:
                 `${baseEndpoints.CDN_URL}/avatars/${interaction.user.id}/${
                   iconBigintToHash(interaction.user.avatar!)
                 }${extension ?? ""}`,
             },
-            description: "lick & sniff!",
-            title: "I, Erika Furudo, know your kink!",
+            title: "I, Erika Furudo, know you're uu-uuing!",
+            description: "Meow at your screen!",
             image: {
-              url: choose(feetImages),
+              url: `https://cataas.com/cat?${Date.now()}`,
             },
           }],
         },

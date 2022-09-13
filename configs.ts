@@ -112,3 +112,26 @@ export const feetImages = [
     "https://cdn.discordapp.com/attachments/989646358426296401/994992555458580520/57218B25-3F84-49A8-8B5B-AC10D80834C9_1_105_c.jpeg",
     "https://cdn.discordapp.com/attachments/989646358426296401/994992555190128670/23991E16-E3BF-4AD9-8269-255969861E69_1_105_c.jpeg",
 ]
+
+export const hornyImages = [
+    "https://cdn.discordapp.com/attachments/988985542651838506/995075529071931462/74d83e5d9524e86d8da1501bd1d28b50.png",
+    "https://cdn.discordapp.com/attachments/988985542651838506/994922658183512074/IMG_9448.png",
+    "https://cdn.discordapp.com/attachments/988985542651838506/994715640755666994/IMG_9416.png",
+    "https://cdn.discordapp.com/attachments/990280475857788988/995058191262023851/unknown.png",
+    "https://pbs.twimg.com/media/FWjHYJKXgAce1yz.jpg",
+    "https://pbs.twimg.com/media/FW3HP8gXEAI7Ynm.jpg",
+    "https://cdn.discordapp.com/attachments/990280475857788988/993593336571101235/unknown.png",
+    "https://cdn.discordapp.com/attachments/990280475857788988/991915132026355802/irys_hololive_and_1_more_drawn_by_getto__825c2757575f76ee322c234fb9eba3e2.JPG",
+    "https://cdn.discordapp.com/attachments/990280475857788988/991915048509382686/98F9E925-9ED2-4998-9226-5739E4214A5B.jpg",
+    "https://cdn.discordapp.com/attachments/990280475857788988/991914940921282590/D3AFD44E-3F44-4416-B8FD-150E92E7B4E2.jpg",
+    "https://cdn.discordapp.com/attachments/990280475857788988/991914871354560522/original_drawn_by_amahara_subaru__a25d32b0f8053bb1b904dcdc9be29500.JPG",
+    "https://cdn.discordapp.com/attachments/990280475857788988/991914752160833606/sashou_mihiro_original_drawn_by_infinote__7c2d5e689e0d4ced55bdc604bffcf9bd.PNG",
+    "https://cdn.discordapp.com/attachments/990280475857788988/991914742866247830/original_drawn_by_h_d__3aba723fe2250f1dc9200e436b05b2cb.JPG",
+    "https://cdn.discordapp.com/attachments/990280475857788988/991914742736236594/sukoya_kana_nijisanji_drawn_by_10eki_tenchou__bb3e203c75aa99be71ceb412b2715be8.JPG",
+    "https://cdn.discordapp.com/attachments/990280475857788988/991914686503202886/yelan_genshin_impact_drawn_by_rosumerii__6fa4a852d0870ff0d79005513264f963.JPG",
+    "https://cdn.discordapp.com/attachments/990280475857788988/991914679314165790/helena_and_helena_azur_lane_drawn_by_age_fx__3ab8a7a9937c6c5d2907df7c315763da.JPG",
+    "https://cdn.discordapp.com/attachments/990280475857788988/991914676856311858/oozora_subaru_hololive_drawn_by_honkivampy__509e0b5a9bde0fdab60ec309209bf56c.JPG",
+    "https://cdn.discordapp.com/attachments/990280475857788988/991914549626277989/astesia_and_astgenne_arknights_drawn_by_wing228__d08a1231b6c62e6470e22bd8bbc74a81.JPG",
+    "https://cdn.discordapp.com/attachments/990280475857788988/991914119022252042/original_drawn_by_quilm__9f3c5b9ff35f5e7695a53f45ef2e005a.JPG",
+    "https://cdn.discordapp.com/attachments/990280475857788988/991914113942954004/glorious_and_glorious_azur_lane_drawn_by_wei_xiao__cc9fb2ab9d83a1645c6a3d871015e3c7.JPG",
+]
