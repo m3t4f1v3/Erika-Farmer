@@ -21,7 +21,16 @@ await fileLoader();
 try {
   await updateApplicationCommands();
 } catch (error) {
-  console.log(Object.getOwnPropertyNames(error))
+  if (
+    // not fond of how this is formatted but best I can really do until the api updates
+    error.message ==
+      "[429] The request was rate limited and it maxed out the retries limit." 
+  ) {
+    //kill repl
+    Deno.kill(1, "SIGINT");
+  } else {
+    console.error(error);
+  }
 }
 
 // STARTS THE CONNECTION TO DISCORD

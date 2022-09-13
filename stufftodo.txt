@@ -1,5 +1,5 @@
 hug: done
-feet: nd
+feet: done
 ecchi: nd
 rules: nd + editable: nd
 kot: nd
