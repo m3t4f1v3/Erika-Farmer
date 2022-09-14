@@ -11,7 +11,7 @@ import { createCommand } from "./mod.ts";
 createCommand({
   name: "kot",
   description:
-    "Erika will send you a picture of an irl neko (cat) thinking of her master Bernkastel",
+    "Erika will send you a picture of an irl neko (cat), thinking of her master Bernkastel",
   type: ApplicationCommandTypes.ChatInput,
   execute: async (Bot, interaction) => {
     var extension;
