@@ -14,7 +14,7 @@ createCommand({
     "Erika will send you a picture of an irl neko (cat), thinking of her master Bernkastel",
   type: ApplicationCommandTypes.ChatInput,
   execute: async (Bot, interaction) => {
-    var extension;
+    let extension;
     if (iconBigintToHash(interaction.user.avatar!).startsWith("a_")) {
       extension = ".gif";
     }

@@ -23,8 +23,7 @@ createCommand({
     },
   ],
   execute: async (Bot, interaction) => {
-    var extension;
-    var personToHug;
+    let extension;
     if (iconBigintToHash(interaction.user.avatar!).startsWith("a_")) {
       extension = ".gif";
     }

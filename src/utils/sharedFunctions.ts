@@ -1,4 +1,4 @@
 export function choose(choices: Array<string>) {
-  var index = Math.floor(Math.random() * choices.length);
+  let index = Math.floor(choices.length * Math.random());
   return choices[index];
 }

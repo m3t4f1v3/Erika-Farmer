@@ -1,8 +1,10 @@
 import "file:///home/runner/Erika-Farmer/src/commands/mod.ts#0";
-import "file:///home/runner/Erika-Farmer/src/commands/hug.ts#0";
 import "file:///home/runner/Erika-Farmer/src/commands/horny/feet.ts#0";
 import "file:///home/runner/Erika-Farmer/src/commands/horny/ecchi.ts#0";
+import "file:///home/runner/Erika-Farmer/src/commands/horny/waifu.ts#0";
 import "file:///home/runner/Erika-Farmer/src/events/interactionCreate.ts#1";
 import "file:///home/runner/Erika-Farmer/src/events/ready.ts#1";
+import "file:///home/runner/Erika-Farmer/src/commands/wada.ts#2";
 import "file:///home/runner/Erika-Farmer/src/commands/kot.ts#2";
 import "file:///home/runner/Erika-Farmer/src/commands/inspire.ts#2";
+import "file:///home/runner/Erika-Farmer/src/commands/hug.ts#2";

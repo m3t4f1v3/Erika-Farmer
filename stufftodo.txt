@@ -3,9 +3,9 @@ feet: done
 ecchi: done
 rules: nd + editable: nd
 kot: done
-inspire: nd
+inspire: done
 rapist: nd +remove: nd
-wada vids: nd
+wada vids: done
 +waifu: nd - nsfw: nd
 +role assign: nd - trolling and description: nd, request: nd
 +auto restart: nd but in a goofy way

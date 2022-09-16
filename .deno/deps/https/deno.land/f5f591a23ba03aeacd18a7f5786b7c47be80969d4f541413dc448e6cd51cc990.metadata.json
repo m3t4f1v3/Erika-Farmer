@@ -1,27 +1,27 @@
 {
   "headers": {
-    "via": "1.1 91356d2137f5a7345e93da4516c49ec4.cloudfront.net (CloudFront)",
-    "content-security-policy": "default-src 'none'; style-src 'unsafe-inline'; sandbox",
-    "vary": "Accept-Encoding, Origin",
-    "etag": "\"65b51ca1705a3f05e74dc31f3d42d3f0\"",
-    "cache-control": "public, max-age=31536000, immutable",
-    "x-amz-cf-pop": "SEA73-P1",
-    "accept-ranges": "bytes",
-    "x-cache": "Hit from cloudfront",
-    "date": "Fri, 09 Sep 2022 15:23:35 GMT",
-    "content-type": "application/typescript; charset=utf-8",
-    "x-amz-cf-id": "KevXfSz0fjNhegKYUaQ8rB_fdBNwXmvBdl-7_un9CCoXPMsH9PnZVw==",
-    "x-amz-replication-status": "FAILED",
-    "x-amz-version-id": "nGzz3W2zhnoTVyK5kIERlNsbmJhzNunY",
-    "last-modified": "Sun, 29 May 2022 16:28:42 GMT",
-    "access-control-allow-origin": "*",
     "content-length": "2736",
-    "age": "229823",
-    "server": "deno/us-west1-a"
+    "content-security-policy": "default-src 'none'; style-src 'unsafe-inline'; sandbox",
+    "x-amz-replication-status": "FAILED",
+    "etag": "\"65b51ca1705a3f05e74dc31f3d42d3f0\"",
+    "x-amz-cf-id": "WxyWkuWLtpj8ul6yBofBpaMYkCxUpcy7nGKNJeM5SDE5scNbhfvAeg==",
+    "cache-control": "public, max-age=31536000, immutable",
+    "date": "Sat, 03 Sep 2022 15:35:04 GMT",
+    "accept-ranges": "bytes",
+    "content-type": "application/typescript; charset=utf-8",
+    "access-control-allow-origin": "*",
+    "vary": "Accept-Encoding, Origin",
+    "x-amz-cf-pop": "ORD58-P3",
+    "x-amz-version-id": "nGzz3W2zhnoTVyK5kIERlNsbmJhzNunY",
+    "x-cache": "Hit from cloudfront",
+    "age": "1088644",
+    "server": "deno/us-central1-b",
+    "via": "1.1 0db70412184345548fe67fbd1d8e6d08.cloudfront.net (CloudFront)",
+    "last-modified": "Sun, 29 May 2022 16:28:42 GMT"
   },
   "url": "https://deno.land/x/discordeno@13.0.0-rc45/helpers/channels/updateVoiceState.ts",
   "now": {
-    "secs_since_epoch": 1662966837,
-    "nanos_since_epoch": 201804238
+    "secs_since_epoch": 1663307948,
+    "nanos_since_epoch": 457488572
   }
 }

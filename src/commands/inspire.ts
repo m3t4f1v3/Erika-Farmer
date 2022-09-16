@@ -13,7 +13,7 @@ createCommand({
   description: "Erika will send an inspirational quote",
   type: ApplicationCommandTypes.ChatInput,
   execute: async (Bot, interaction) => {
-    var extension;
+    let extension;
     if (iconBigintToHash(interaction.user.avatar!).startsWith("a_")) {
       extension = ".gif";
     }

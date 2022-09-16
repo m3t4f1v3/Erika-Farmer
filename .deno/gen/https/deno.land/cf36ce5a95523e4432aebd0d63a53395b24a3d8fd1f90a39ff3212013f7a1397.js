@@ -1,3 +1,0 @@
-export { fromFileUrl } from "https://deno.land/std@0.153.0/path/mod.ts";
-export * as msgpack from "https://cdn.skypack.dev/@msgpack/msgpack@v2.7.2?dts";
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGVwcy5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbImRlcHMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxFQUFFLFdBQVcsRUFBRSxNQUFNLDJDQUEyQyxDQUFDO0FBQ3hFLE9BQU8sS0FBSyxPQUFPLE1BQU0scURBQXFELENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgeyBmcm9tRmlsZVVybCB9IGZyb20gXCJodHRwczovL2Rlbm8ubGFuZC9zdGRAMC4xNTMuMC9wYXRoL21vZC50c1wiO1xuZXhwb3J0ICogYXMgbXNncGFjayBmcm9tIFwiaHR0cHM6Ly9jZG4uc2t5cGFjay5kZXYvQG1zZ3BhY2svbXNncGFja0B2Mi43LjI/ZHRzXCI7XG4iXX0=
