@@ -22,6 +22,7 @@ createCommand({
     if (iconBigintToHash(interaction.user.avatar!).startsWith("a_")) {
       extension = ".gif";
     }
+    
     await Bot.helpers.sendInteractionResponse(
       interaction.id,
       interaction.token,

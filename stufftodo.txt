@@ -1,13 +1,13 @@
-hug: done - sub
+hug: done
 feet: done - sub
 ecchi: done - sub
-rules: nd + editable: nd
+rules: nd + editable: nd probably not gonna do because we have other bots
 kot: done
 inspire: done
 memories: done +remove: done +admin only: nd
 wada vids: done
 +waifu: done + tag selection - sub
-+role assign: nd - trolling and description: nd, request: nd
++role assign: nd - trolling and description: nd, request: nd also not gonna do
 +auto restart: done - not needed anymore
 
 subcommand rewrite: done
