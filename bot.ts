@@ -32,5 +32,6 @@ export interface BotClient extends BotWithCache<BotWithHelpersPlugin> {
 
 // THIS IS THE BOT YOU WANT TO USE EVERYWHERE IN YOUR CODE! IT HAS EVERYTHING BUILT INTO IT!
 export const Bot = bot as BotClient;
+export const BotRaw = bot;
 // PREPARE COMMANDS HOLDER
 Bot.commands = new Collection();

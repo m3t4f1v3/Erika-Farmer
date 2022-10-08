@@ -4,17 +4,24 @@ import {
   baseEndpoints,
   iconBigintToHash,
   InteractionResponseTypes,
-} from "../../../deps.ts";
+} from "../../deps.ts";
 
-import { createCommand } from "../mod.ts";
-import { hornyImages } from "../../../configs.ts";
-import { choose } from "../../utils/sharedFunctions.ts";
+import { createCommand } from "./mod.ts";
+import { hugImages } from "../../configs.ts";
+import { choose } from "../utils/sharedFunctions.ts";
 
 createCommand({
-  name: "ecchi",
-  description:
-    "Erika will send an anime nsfw picture from a list curated by hand",
+  name: "hug",
+  description: "Hugs you",
   type: ApplicationCommandTypes.ChatInput,
+  options: [
+    {
+      name: "huggee",
+      description: "Who do you want to hug?",
+      type: ApplicationCommandOptionTypes.User,
+      required: true,
+    },
+  ],
   execute: async (Bot, interaction) => {
     let extension;
     if (iconBigintToHash(interaction.user.avatar!).startsWith("a_")) {
@@ -30,16 +37,18 @@ createCommand({
             author: {
               name: interaction.user.username,
               url:
-                "https://cdn.discordapp.com/attachments/1002598216824537108/1019193892127641640/unknown.png",
+                "https://sketchfab.com/models/81782e0f3b94472ab2e339f2e577246c/embed?camera=0&dnt=1",
               iconUrl:
                 `${baseEndpoints.CDN_URL}/avatars/${interaction.user.id}/${
                   iconBigintToHash(interaction.user.avatar!)
                 }${extension ?? ""}`,
             },
-            title: "I, Erika Furudo, know you're aroused!",
-            description: "lick & sniff!",
+            title: "I love you",
+            description: `<@${interaction.user.id}> hugs <@${
+              interaction.data!.options![0].value
+            }>`,
             image: {
-              url: choose(hornyImages),
+              url: choose(hugImages),
             },
           }],
         },
