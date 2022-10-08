@@ -80,7 +80,7 @@ createCommand({
       "https://api.waifu.im/random/?" + waifuArguments,
     )).json();
 
-    try {
+    if (waifu["images"] !== undefined) {
       await Bot.helpers.sendInteractionResponse(
         interaction.id,
         interaction.token,
@@ -106,39 +106,35 @@ createCommand({
           },
         },
       );
-    } catch (error) {
-      if (error instanceof TypeError) {
-        await Bot.helpers.sendInteractionResponse(
-          interaction.id,
-          interaction.token,
-          {
-            type: InteractionResponseTypes.ChannelMessageWithSource,
-            data: {
-              embeds: [{
-                author: {
-                  name: interaction.user.username,
-                  url:
-                    "https://ih1.redbubble.net/image.3287472777.9570/pp,504x498-pad,600x600,f8f8f8.jpg",
-                  iconUrl:
-                    `${baseEndpoints.CDN_URL}/avatars/${interaction.user.id}/${
-                      iconBigintToHash(interaction.user.avatar!)
-                    }${extension ?? ""}`,
-                },
-                title: "I, Erika Furudo, have detected a logic error",
-                description:
-                  "Lambdadelta has confirmed that you have selected unavailable tags",
-                image: {
-                  url:
-                    "https://static.wikia.nocookie.net/umineko/images/4/4c/Eri_a15_akuwarai6.png/revision/latest?cb=20140723062924",
-                },
-              }],
-              flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
-            },
+    } else {
+      await Bot.helpers.sendInteractionResponse(
+        interaction.id,
+        interaction.token,
+        {
+          type: InteractionResponseTypes.ChannelMessageWithSource,
+          data: {
+            embeds: [{
+              author: {
+                name: interaction.user.username,
+                url:
+                  "https://ih1.redbubble.net/image.3287472777.9570/pp,504x498-pad,600x600,f8f8f8.jpg",
+                iconUrl:
+                  `${baseEndpoints.CDN_URL}/avatars/${interaction.user.id}/${
+                    iconBigintToHash(interaction.user.avatar!)
+                  }${extension ?? ""}`,
+              },
+              title: "I, Erika Furudo, have detected a logic error",
+              description:
+                "Lambdadelta has confirmed that you have selected unavailable tags",
+              image: {
+                url:
+                  "https://static.wikia.nocookie.net/umineko/images/4/4c/Eri_a15_akuwarai6.png/revision/latest?cb=20140723062924",
+              },
+            }],
+            flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
           },
-        );
-      } else {
-        console.error(error);
-      }
+        },
+      );
     }
   },
 });

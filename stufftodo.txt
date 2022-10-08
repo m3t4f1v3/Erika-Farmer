@@ -1,11 +1,14 @@
-hug: done
-feet: done
-ecchi: done
+hug: done - sub
+feet: done - sub
+ecchi: done - sub
 rules: nd + editable: nd
 kot: done
 inspire: done
-rapist: nd +remove: nd
+memories: done +remove: done +admin only: nd
 wada vids: done
-+waifu: nd - nsfw: nd
++waifu: done + tag selection - sub
 +role assign: nd - trolling and description: nd, request: nd
-+auto restart: nd but in a goofy way
++auto restart: done - not needed anymore
+
+subcommand rewrite: done
+nsfw block: nd

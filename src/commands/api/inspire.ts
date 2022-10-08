@@ -4,9 +4,9 @@ import {
   baseEndpoints,
   iconBigintToHash,
   InteractionResponseTypes,
-} from "../../deps.ts";
+} from "../../../deps.ts";
 
-import { createCommand } from "./mod.ts";
+import { createCommand } from "../mod.ts";
 
 createCommand({
   name: "inspire",

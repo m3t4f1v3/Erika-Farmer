@@ -4,12 +4,12 @@ import {
   baseEndpoints,
   iconBigintToHash,
   InteractionResponseTypes,
-} from "../../deps.ts";
+} from "../../../deps.ts";
 
-import { parse } from "../../deps.ts";
+import { parse } from "../../../deps.ts";
 
-import { createCommand } from "./mod.ts";
-import { choose } from "../utils/sharedFunctions.ts";
+import { createCommand } from "../mod.ts";
+import { choose } from "../../utils/sharedFunctions.ts";
 
 var wadaVideos: string[] = [];
 var timeSinceLastWadaUpdate = Date.now();

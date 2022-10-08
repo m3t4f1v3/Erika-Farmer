@@ -4,11 +4,11 @@ import {
   baseEndpoints,
   iconBigintToHash,
   InteractionResponseTypes,
-} from "../../deps.ts";
+} from "../../../deps.ts";
 
-import { createCommand } from "./mod.ts";
-import { hugImages } from "../../configs.ts";
-import { choose } from "../utils/sharedFunctions.ts";
+import { createCommand } from "../mod.ts";
+import { hugImages } from "../../../configs.ts";
+import { choose } from "../../utils/sharedFunctions.ts";
 
 createCommand({
   name: "hug",
