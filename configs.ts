@@ -35,6 +35,23 @@ export const hugImages = [
 ];
 
 export const feetImages = [
+  "http://whentheycode.epizy.com/extra/feet/yay.png",
+  "http://whentheycode.epizy.com/extra/feet/wweeeeee.png",
+  "http://whentheycode.epizy.com/extra/feet/we.png",
+  "http://whentheycode.epizy.com/extra/unkown.png",
+  "http://whentheycode.epizy.com/extra/unkown-99.png",
+  "http://whentheycode.epizy.com/extra/unknown-98.png",
+  "http://whentheycode.epizy.com/extra/unknown-97.png ",
+  "http://whentheycode.epizy.com/extra/unknown-96.png ",
+  "http://whentheycode.epizy.com/extra/unknown-95.png",
+  "http://whentheycode.epizy.com/extra/unknown-94.png",
+  "http://whentheycode.epizy.com/extra/unknown-93.png",
+  "http://whentheycode.epizy.com/extra/unknown-92.png",
+  "http://whentheycode.epizy.com/extra/feet/unknown-91.png",
+  "http://whentheycode.epizy.com/extra/feet/unknown-90.png",
+  "http://whentheycode.epizy.com/extra/feet/unknown-9.png",
+  "http://whentheycode.epizy.com/extra/feet/unknown-89.png",
+  "http://whentheycode.epizy.com/extra/feet/unknown-89%20(1).png",
   "https://cdn.discordapp.com/attachments/989649624673427506/989931163042852914/unknown.png",
   "https://cdn.discordapp.com/attachments/989649624673427506/990326414886731786/unknown.png",
   "https://cdn.discordapp.com/attachments/989646358426296401/993988924944957450/unknown.png",

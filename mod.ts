@@ -6,7 +6,8 @@ import { fileLoader, importDirectory } from "./src/utils/loader.ts";
 import { updateApplicationCommands } from "./src/utils/updateCommands.ts";
 // setup db
 import { Bot } from "./bot.ts";
-import {updateGuilds} from "./src/utils/sharedFunctions.ts"
+import { initialize } from "./src/database/mod.ts";
+//import {updateGuilds} from "./src/utils/sharedFunctions.ts"
 
 log.info("Starting bot...");
 
@@ -15,11 +16,12 @@ await Promise.all(
   [
     "./src/commands",
     "./src/events",
+    "./src/database",
     // "./src/tasks",
   ].map((path) => importDirectory(Deno.realPathSync(path))),
 );
 await fileLoader();
-
+await initialize();
 // UPDATES YOUR COMMANDS TO LATEST COMMANDS
 
 try {
@@ -35,9 +37,9 @@ undefined`
     // kill repl
     Deno.kill(1, "SIGINT");
   } else {
-    console.error("Updating failed:")
+    console.error("Updating failed:");
     console.error(error.message);
-    console.error("Stack:")
+    console.error("Stack:");
     console.error(error.stack);
   }
 }

@@ -21,6 +21,12 @@ createCommand({
       type: ApplicationCommandOptionTypes.User,
       required: true,
     },
+    {
+      name: "new_image",
+      description: "New image",
+      type: ApplicationCommandOptionTypes.String,
+      required: false,
+    },
   ],
   execute: async (Bot, interaction) => {
     let extension;

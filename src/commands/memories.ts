@@ -7,12 +7,13 @@ import {
 import { createCommand } from "./mod.ts";
 
 import {
-  addQuote,
+  addValue,
   choose,
-  delQuote,
-  getQuotes,
-  servers,
+  delValue,
+  getValues,
 } from "../utils/sharedFunctions.ts";
+
+import { guilds } from "../database/mod.ts";
 
 createCommand({
   name: "memories",
@@ -44,29 +45,54 @@ createCommand({
     }],
   }],
   execute: async (Bot, interaction) => {
-    if (interaction.guildId && servers[interaction.guildId.toString()]) {
+    if (interaction.guildId && guilds.get(interaction.guildId.toString())) {
       switch (interaction.data!.options![0].name) {
         case "intellectual": {
-          await addQuote(
-            interaction.data!.options![0]!.options![0]!.value as string,
-            interaction.guildId as bigint,
-            interaction.user.id,
-          );
-          await Bot.helpers.sendInteractionResponse(
-            interaction.id,
-            interaction.token,
-            {
-              type: InteractionResponseTypes.ChannelMessageWithSource,
-              data: {
-                content: "Your confession has been duly noted.",
-                flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
+          try {
+            new URL(
+              interaction.data!.options![0]!.options![0]!.value as string,
+            );
+
+            await Bot.helpers.sendInteractionResponse(
+              interaction.id,
+              interaction.token,
+              {
+                type: InteractionResponseTypes.ChannelMessageWithSource,
+                data: {
+                  content: "No URLs are allowed.",
+                  flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
+                },
               },
-            },
-          );
+            );
+          } catch (err) {
+            await addValue(
+              interaction.data!.options![0]!.options![0]!.value as string,
+              interaction.guildId as bigint,
+              interaction.user.id,
+              "rapistDB",
+            );
+            await Bot.helpers.sendInteractionResponse(
+              interaction.id,
+              interaction.token,
+              {
+                type: InteractionResponseTypes.ChannelMessageWithSource,
+                data: {
+                  content: "Your confession has been duly noted.",
+                  flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
+                },
+              },
+            );
+          }
           break;
         }
         case "rapist": {
-          if (getQuotes(interaction.guildId as bigint).length == 0) {
+          if (
+            ((await getValues(
+              interaction.guildId as bigint,
+              "rapistDB",
+            )) as any)!.length ==
+              0
+          ) {
             await Bot.helpers.sendInteractionResponse(
               interaction.id,
               interaction.token,
@@ -85,7 +111,14 @@ createCommand({
               {
                 type: InteractionResponseTypes.ChannelMessageWithSource,
                 data: {
-                  content: choose(getQuotes(interaction.guildId as bigint)),
+                  content: choose(
+                    Object.keys(
+                      await getValues(
+                        interaction.guildId as bigint,
+                        "rapistDB",
+                      ) as string[],
+                    ),
+                  ),
                 },
               },
             );
@@ -93,10 +126,11 @@ createCommand({
           break;
         }
         case "bonk": {
-          await delQuote(
+          await delValue(
             interaction.data!.options![0]!.options![0]!.value as string,
             interaction.guildId as bigint,
             interaction.user.id,
+            "rapistDB",
           );
           await Bot.helpers.sendInteractionResponse(
             interaction.id,
