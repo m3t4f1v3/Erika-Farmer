@@ -1,10 +1,12 @@
 import {
   ApplicationCommandOptionTypes,
   ApplicationCommandTypes,
+  BitwisePermissionFlags,
   InteractionResponseTypes,
 } from "../../deps.ts";
 
 import { createCommand } from "./mod.ts";
+import { Bot } from "../../bot.ts";
 
 import {
   addValue,
@@ -126,23 +128,40 @@ createCommand({
           break;
         }
         case "bonk": {
-          await delValue(
-            interaction.data!.options![0]!.options![0]!.value as string,
-            interaction.guildId as bigint,
-            interaction.user.id,
-            "rapistDB",
-          );
-          await Bot.helpers.sendInteractionResponse(
-            interaction.id,
-            interaction.token,
-            {
-              type: InteractionResponseTypes.ChannelMessageWithSource,
-              data: {
-                content: "Ow.",
-                flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
+          if (
+            await delValue(
+              interaction.data!.options![0]!.options![0]!.value as string,
+              interaction.guildId as bigint,
+              interaction.user.id,
+              "rapistDB",
+            ) ||
+            interaction.member!.permissions! &
+              BigInt(BitwisePermissionFlags.MANAGE_MESSAGES)
+          ) {
+            await Bot.helpers.sendInteractionResponse(
+              interaction.id,
+              interaction.token,
+              {
+                type: InteractionResponseTypes.ChannelMessageWithSource,
+                data: {
+                  content: "Ow.",
+                  flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
+                },
               },
-            },
-          );
+            );
+          } else {
+            await Bot.helpers.sendInteractionResponse(
+              interaction.id,
+              interaction.token,
+              {
+                type: InteractionResponseTypes.ChannelMessageWithSource,
+                data: {
+                  content: "WHAT WAS THAT FOR!!!!!",
+                  flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
+                },
+              },
+            );
+          }
           break;
         }
         default: {

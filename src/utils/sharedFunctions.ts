@@ -1,5 +1,5 @@
 // probably a race function but who cares
-import { Bot } from "../../bot.ts";
+//import { Bot } from "../../bot.ts";
 import { guilds } from "../database/mod.ts";
 
 //console.log(await guilds.getAll());
@@ -70,6 +70,7 @@ export async function delValue(
       if (rapistDB[value] == userID.toString()) {
         delete rapistDB[value];
         await guilds.update(server, guildData);
+        return true;
       }
     }
   }
