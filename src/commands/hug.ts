@@ -7,8 +7,7 @@ import {
 } from "../../deps.ts";
 
 import { createCommand } from "./mod.ts";
-import { hugImages } from "../../configs.ts";
-import { choose } from "../utils/sharedFunctions.ts";
+import { choose, getValues } from "../utils/sharedFunctions.ts";
 
 createCommand({
   name: "hug",
@@ -21,18 +20,13 @@ createCommand({
       type: ApplicationCommandOptionTypes.User,
       required: true,
     },
-    {
-      name: "new_image",
-      description: "New image",
-      type: ApplicationCommandOptionTypes.String,
-      required: false,
-    },
   ],
   execute: async (Bot, interaction) => {
     let extension;
     if (iconBigintToHash(interaction.user.avatar!).startsWith("a_")) {
       extension = ".gif";
     }
+
     await Bot.helpers.sendInteractionResponse(
       interaction.id,
       interaction.token,
@@ -54,7 +48,14 @@ createCommand({
               interaction.data!.options![0].value
             }>`,
             image: {
-              url: choose(hugImages),
+              url: choose(
+                Object.keys(
+                  await getValues(
+                    interaction.guildId as bigint,
+                    "hugImages",
+                  ) as string[],
+                ),
+              ),
             },
           }],
         },

@@ -11,11 +11,9 @@ import { BotRaw } from "../../bot.ts";
 
 import type { BigString } from "../../deps.ts";
 
-import { feetImages, hornyImages } from "../../configs.ts";
-
 import { createCommand } from "./mod.ts";
 
-import { choose } from "../utils/sharedFunctions.ts";
+import { choose, getValues } from "../utils/sharedFunctions.ts";
 
 createCommand({
   name: "anime",
@@ -107,7 +105,14 @@ createCommand({
                   title: "I, Erika Furudo, know you're aroused!",
                   description: "lick & sniff!",
                   image: {
-                    url: choose(hornyImages),
+                    url: choose(
+                      Object.keys(
+                        await getValues(
+                          interaction.guildId as bigint,
+                          "hornyImages",
+                        ) as string[],
+                      ),
+                    ),
                   },
                 }],
               },
@@ -154,7 +159,14 @@ createCommand({
                   title: "I, Erika Furudo, know your kink!",
                   description: "Feast with your eyes!",
                   image: {
-                    url: choose(feetImages),
+                    url: choose(
+                      Object.keys(
+                        await getValues(
+                          interaction.guildId as bigint,
+                          "feetImages",
+                        ) as string[],
+                      ),
+                    ), 
                   },
                 }],
               },

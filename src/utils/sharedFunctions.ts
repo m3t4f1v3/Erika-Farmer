@@ -1,7 +1,7 @@
-// probably a race function but who cares
+// probably a race condition but who cares
 //import { Bot } from "../../bot.ts";
 import { guilds } from "../database/mod.ts";
-
+import { BitwisePermissionFlags } from "../../deps.ts";
 //console.log(await guilds.getAll());
 
 /*
@@ -17,13 +17,13 @@ export async function updateGuilds() {
 */
 
 //console.log(await typeof guilds.get("1001210643485036634"))
-/*
-guilds.update("1020419041741000705", {
-  rapistDB: {
-    "lol": 681096336392585255,
-  },
+
+const deleteLogs = await Deno.open("./deleteLogs.txt", {
+  append: true,
+  create: true,
 });
-*/
+
+const encoder = new TextEncoder();
 
 export async function getValues(serverID: bigint, database: string) {
   // all useless but such is the curse of typescript
@@ -31,6 +31,8 @@ export async function getValues(serverID: bigint, database: string) {
   let guildData = await guilds.get(serverID.toString()) as any;
   if (typeof guildData === "object") {
     return guildData![database];
+  } else {
+    return false;
   }
 }
 
@@ -58,17 +60,26 @@ export async function delValue(
   value: string,
   serverID: bigint,
   userID: bigint,
+  permissions: bigint,
   database: string,
 ) {
   let server = serverID.toString();
   let guildData = await guilds.get(server) as any;
-  let rapistDB = guildData["rapistDB"] as any;
+  let table = guildData[database] as any;
 
   if (typeof guildData === "object") {
-    if (typeof rapistDB === "object") {
-      // checks if it exists AND checks if can be deleted (I'll make it check if you're an admin later)
-      if (rapistDB[value] == userID.toString()) {
-        delete rapistDB[value];
+    if (typeof table === "object") {
+      if (
+        table[value] == userID.toString() ||
+        (permissions &
+            BigInt(BitwisePermissionFlags.MANAGE_MESSAGES) &&
+          table[value] !== undefined)
+      ) {
+        delete table[value];
+        await Deno.writeAll(
+          deleteLogs,
+          encoder.encode(`${value}:${userID.toString()}`),
+        );
         await guilds.update(server, guildData);
         return true;
       }

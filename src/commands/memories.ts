@@ -1,12 +1,17 @@
 import {
   ApplicationCommandOptionTypes,
   ApplicationCommandTypes,
-  BitwisePermissionFlags,
+  baseEndpoints,
+  iconBigintToHash,
   InteractionResponseTypes,
+  isURL,
 } from "../../deps.ts";
 
 import { createCommand } from "./mod.ts";
 import { Bot } from "../../bot.ts";
+import { logger } from "../utils/logger.ts";
+
+const log = logger({ name: "Memories" });
 
 import {
   addValue,
@@ -23,13 +28,32 @@ createCommand({
   type: ApplicationCommandTypes.ChatInput,
   options: [{
     name: "intellectual",
-    description: "Erika will learn a nice quote",
+    description: "Erika will learn a nice thing",
     type: ApplicationCommandOptionTypes.SubCommand,
     options: [{
-      name: "quote",
-      description: "A nice quote to teach Erika.",
+      name: "quote_or_image",
+      description: "A nice quote or image to teach Erika.",
       type: ApplicationCommandOptionTypes.String,
       required: true,
+    }, {
+      name: "database",
+      description: "Which gray cells to teach.",
+      type: ApplicationCommandOptionTypes.String,
+      choices: [
+        {
+          name: "hugs",
+          value: "hugImages",
+        },
+        {
+          name: "feet",
+          value: "feetImages",
+        },
+        {
+          name: "horny images",
+          value: "hornyImages",
+        },
+      ],
+      required: false,
     }],
   }, {
     name: "rapist",
@@ -44,69 +68,155 @@ createCommand({
       description: 'the quote to be "untaught"',
       type: ApplicationCommandOptionTypes.String,
       required: true,
+    }, {
+      name: "database",
+      description: 'which gray cells to "unteach"',
+      type: ApplicationCommandOptionTypes.String,
+      choices: [
+        {
+          name: "quotes",
+          value: "rapistDB",
+        },
+        {
+          name: "hugs",
+          value: "hugImages",
+        },
+        {
+          name: "feet",
+          value: "feetImages",
+        },
+        {
+          name: "horny images",
+          value: "hornyImages",
+        },
+      ],
+      required: true,
     }],
   }],
   execute: async (Bot, interaction) => {
-    if (interaction.guildId && guilds.get(interaction.guildId.toString())) {
+    console.log;
+    if (
+      interaction.guildId &&
+      (await guilds.get(interaction.guildId!.toString())) !== undefined
+    ) {
       switch (interaction.data!.options![0].name) {
         case "intellectual": {
-          try {
-            new URL(
-              interaction.data!.options![0]!.options![0]!.value as string,
-            );
+          // add to normal rapistDB
+          if (interaction.data!.options![0]!.options![1] === undefined) {
+            if (
+              isURL(
+                interaction.data!.options![0]!.options![0]!.value as string,
+                {
+                  protocols: ["http", "https"],
+                  require_tld: true,
+                  require_protocol: false,
+                  require_host: true,
+                  require_port: false,
+                  require_valid_protocol: true,
+                  allow_underscores: false,
+                  host_whitelist: false,
+                  host_blacklist: false,
+                  allow_trailing_dot: false,
+                  allow_protocol_relative_urls: false,
+                  disallow_auth: false,
+                  validate_length: true,
+                },
+              )
+            ) {
+              await Bot.helpers.sendInteractionResponse(
+                interaction.id,
+                interaction.token,
+                {
+                  type: InteractionResponseTypes.ChannelMessageWithSource,
+                  data: {
+                    content:
+                      "URLs are not allowed in the quote database, try changing the database option.",
+                    flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
+                  },
+                },
+              );
+            } else {
+              await addValue(
+                interaction.data!.options![0]!.options![0]!.value as string,
+                interaction.guildId as bigint,
+                interaction.user.id,
+                "rapistDB",
+              );
+              await Bot.helpers.sendInteractionResponse(
+                interaction.id,
+                interaction.token,
+                {
+                  type: InteractionResponseTypes.ChannelMessageWithSource,
+                  data: {
+                    content: "Your confession has been duly noted.",
+                    flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
+                  },
+                },
+              );
+            }
+          } else {
+            if (
+              isURL(
+                interaction.data!.options![0]!.options![0]!.value as string,
+                {
+                  protocols: ["http", "https"],
+                  require_tld: true,
+                  require_protocol: false,
+                  require_host: true,
+                  require_port: false,
+                  require_valid_protocol: true,
+                  allow_underscores: false,
+                  host_whitelist: false,
+                  host_blacklist: false,
+                  allow_trailing_dot: false,
+                  allow_protocol_relative_urls: false,
+                  disallow_auth: false,
+                  validate_length: true,
+                },
+              )
+            ) {
+              await addValue(
+                interaction.data!.options![0]!.options![0]!.value as string,
+                interaction.guildId as bigint,
+                interaction.user.id,
+                interaction.data!.options![0]!.options![1]!.value as string,
+              );
 
-            await Bot.helpers.sendInteractionResponse(
-              interaction.id,
-              interaction.token,
-              {
-                type: InteractionResponseTypes.ChannelMessageWithSource,
-                data: {
-                  content: "No URLs are allowed.",
-                  flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
+              await Bot.helpers.sendInteractionResponse(
+                interaction.id,
+                interaction.token,
+                {
+                  type: InteractionResponseTypes.ChannelMessageWithSource,
+                  data: {
+                    content: "Your confession has been duly noted.",
+                    flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
+                  },
                 },
-              },
-            );
-          } catch (err) {
-            await addValue(
-              interaction.data!.options![0]!.options![0]!.value as string,
-              interaction.guildId as bigint,
-              interaction.user.id,
-              "rapistDB",
-            );
-            await Bot.helpers.sendInteractionResponse(
-              interaction.id,
-              interaction.token,
-              {
-                type: InteractionResponseTypes.ChannelMessageWithSource,
-                data: {
-                  content: "Your confession has been duly noted.",
-                  flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
+              );
+            } else {
+              await Bot.helpers.sendInteractionResponse(
+                interaction.id,
+                interaction.token,
+                {
+                  type: InteractionResponseTypes.ChannelMessageWithSource,
+                  data: {
+                    content: "Use a URL next time.",
+                    flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
+                  },
                 },
-              },
-            );
+              );
+            }
+
+            break;
           }
-          break;
         }
         case "rapist": {
           if (
-            ((await getValues(
+            await getValues(
               interaction.guildId as bigint,
               "rapistDB",
-            )) as any)!.length ==
-              0
+            )
           ) {
-            await Bot.helpers.sendInteractionResponse(
-              interaction.id,
-              interaction.token,
-              {
-                type: InteractionResponseTypes.ChannelMessageWithSource,
-                data: {
-                  content: "no thoughts\nhead empty",
-                  flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
-                },
-              },
-            );
-          } else {
             await Bot.helpers.sendInteractionResponse(
               interaction.id,
               interaction.token,
@@ -124,6 +234,18 @@ createCommand({
                 },
               },
             );
+          } else {
+            await Bot.helpers.sendInteractionResponse(
+              interaction.id,
+              interaction.token,
+              {
+                type: InteractionResponseTypes.ChannelMessageWithSource,
+                data: {
+                  content: "no thoughts\nhead empty",
+                  flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
+                },
+              },
+            );
           }
           break;
         }
@@ -133,10 +255,9 @@ createCommand({
               interaction.data!.options![0]!.options![0]!.value as string,
               interaction.guildId as bigint,
               interaction.user.id,
-              "rapistDB",
-            ) ||
-            interaction.member!.permissions! &
-              BigInt(BitwisePermissionFlags.MANAGE_MESSAGES)
+              interaction.member!.permissions!,
+              interaction.data!.options![0]!.options![1]!.value as string,
+            )
           ) {
             await Bot.helpers.sendInteractionResponse(
               interaction.id,
@@ -170,13 +291,37 @@ createCommand({
         }
       }
     } else {
+      let extension;
+      if (iconBigintToHash(interaction.user.avatar!).startsWith("a_")) {
+        extension = ".gif";
+      }
+      guilds.update(interaction.guildId!.toString(), {
+        rapistDB: {},
+        feetImages: {},
+        hornyImages: {},
+      });
       await Bot.helpers.sendInteractionResponse(
         interaction.id,
         interaction.token,
         {
           type: InteractionResponseTypes.ChannelMessageWithSource,
           data: {
-            content: "There is no hope for this guild.",
+            embeds: [{
+              author: {
+                name: interaction.user.username,
+                url: "https://i.ytimg.com/vi/J_6yrg2v8ts/maxresdefault.jpg",
+                iconUrl:
+                  `${baseEndpoints.CDN_URL}/avatars/${interaction.user.id}/${
+                    iconBigintToHash(interaction.user.avatar!)
+                  }${extension ?? ""}`,
+              },
+              title: "There is no hope for this guild",
+              description: "*tocatta and fugue in the background*",
+              image: {
+                url:
+                  "https://64.media.tumblr.com/7147fe3c8d998cf38e38532586b3f3ec/tumblr_p89mgywuiG1tn7gkoo2_1280.png",
+              },
+            }],
             flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
           },
         },

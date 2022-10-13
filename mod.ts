@@ -49,9 +49,10 @@ undefined`
 // STARTS THE CONNECTION TO DISCORD
 
 await startBot(Bot /*back alley*/ as BotType);
+//log.info(Object.getOwnPropertyNames(Bot.cache));
 
-// wooooo i love always on
-const server = Deno.listen({ port: 8080 });
+/*
+// wooooo i love always on/*const server = Deno.listen({ port: 8080 });
 
 for await (const conn of server) {
   handleHttp(conn).catch(console.error);
@@ -80,3 +81,4 @@ async function handleHttp(conn: Deno.Conn) {
     await requestEvent.respondWith(response);
   }
 }
+*/
