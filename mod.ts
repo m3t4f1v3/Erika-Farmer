@@ -37,10 +37,10 @@ undefined`
     // kill repl
     Deno.kill(1, "SIGINT");
   } else {
-    console.error("Updating failed:");
-    console.error(error.message);
-    console.error("Stack:");
-    console.error(error.stack);
+    log.error("Updating failed:");
+    log.error(error.message);
+    log.error("Stack:");
+    log.error(error.stack);
   }
 }
 
@@ -51,34 +51,21 @@ undefined`
 await startBot(Bot /*back alley*/ as BotType);
 //log.info(Object.getOwnPropertyNames(Bot.cache));
 
-/*
-// wooooo i love always on/*const server = Deno.listen({ port: 8080 });
+// wooooo i love always on
 
-for await (const conn of server) {
-  handleHttp(conn).catch(console.error);
-}
+const server = Deno.listen({ port: 8080 });
+
+const emptyResponse = new Response("apparently this needs to pad a bunch", { status: 200})
 
 async function handleHttp(conn: Deno.Conn) {
   const httpConn = Deno.serveHttp(conn);
   for await (const requestEvent of httpConn) {
     // Try opening the file
-    let file;
-    try {
-      file = await Deno.open("erika.gif", { read: true });
-    } catch {
-      // If the file cannot be opened, return a "404 Not Found" response
-      const notFoundResponse = new Response("404 Not Found", { status: 404 });
-      await requestEvent.respondWith(notFoundResponse);
-      return;
-    }
-
-    // Build a readable stream so the file doesn't have to be fully loaded into
-    // memory while we send it
-    const readableStream = file.readable;
-
-    // Build and send the response
-    const response = new Response(readableStream);
-    await requestEvent.respondWith(response);
+    await requestEvent.respondWith(emptyResponse);
+    return;
   }
 }
-*/
+
+for await (const conn of server) {
+  handleHttp(conn).catch(log.error);
+}

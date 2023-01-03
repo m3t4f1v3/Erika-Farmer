@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns:yt="http://www.youtube.com/xml/schemas/2015" xmlns:media="http://search.yahoo.com/mrss/" xmlns="http://www.w3.org/2005/Atom">
  <link rel="self" href="http://www.youtube.com/feeds/videos.xml?channel_id=UCKQgmJJfClf-_C3z_x4C-5A"/>
- <id>yt:channel:UCKQgmJJfClf-_C3z_x4C-5A</id>
- <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
+ <id>yt:channel:</id>
+ <yt:channelId></yt:channelId>
  <title>Wada Zecheru</title>
  <link rel="alternate" href="https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A"/>
  <author>
@@ -10,6 +10,409 @@
   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
  </author>
  <published>2022-03-12T08:51:22+00:00</published>
+ <entry>
+  <id>yt:video:GhYnAAQoEe8</id>
+  <yt:videoId>GhYnAAQoEe8</yt:videoId>
+  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
+  <title>4th Dimension - Umineko</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=GhYnAAQoEe8"/>
+  <author>
+   <name>Wada Zecheru</name>
+   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
+  </author>
+  <published>2022-12-31T12:00:11+00:00</published>
+  <updated>2022-12-31T12:00:11+00:00</updated>
+  <media:group>
+   <media:title>4th Dimension - Umineko</media:title>
+   <media:content url="https://www.youtube.com/v/GhYnAAQoEe8?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i4.ytimg.com/vi/GhYnAAQoEe8/hqdefault.jpg" width="480" height="360"/>
+   <media:description>Ever heard of the fourth-dimensional creature ?
+Follow me for more shitposts: 
+➢ Twitter: https://twitter.com/zecheru_razvan
+➢  (+18) Discord :  https://discord.gg/4BdybqcUZC
+
+#umineko</media:description>
+   <media:community>
+    <media:starRating count="79" average="5.00" min="1" max="5"/>
+    <media:statistics views="632"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:gU_6Y_i1cYU</id>
+  <yt:videoId>gU_6Y_i1cYU</yt:videoId>
+  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
+  <title>Business Man - Umineko</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=gU_6Y_i1cYU"/>
+  <author>
+   <name>Wada Zecheru</name>
+   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
+  </author>
+  <published>2022-12-18T23:18:00+00:00</published>
+  <updated>2023-01-03T02:27:32+00:00</updated>
+  <media:group>
+   <media:title>Business Man - Umineko</media:title>
+   <media:content url="https://www.youtube.com/v/gU_6Y_i1cYU?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i4.ytimg.com/vi/gU_6Y_i1cYU/hqdefault.jpg" width="480" height="360"/>
+   <media:description>Okonogi's entrepreneur adventure...
+Follow me for more shitposts: 
+➢ Twitter: https://twitter.com/zecheru_razvan
+➢  (+18) Discord :  https://discord.gg/4BdybqcUZC
+Song: Business Man · Tom Cardy
+
+
+
+#umineko</media:description>
+   <media:community>
+    <media:starRating count="104" average="5.00" min="1" max="5"/>
+    <media:statistics views="1420"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:bk7Fdj7uzTI</id>
+  <yt:videoId>bk7Fdj7uzTI</yt:videoId>
+  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
+  <title>Suspicious Boing Boings - Umineko</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=bk7Fdj7uzTI"/>
+  <author>
+   <name>Wada Zecheru</name>
+   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
+  </author>
+  <published>2022-12-15T21:50:56+00:00</published>
+  <updated>2022-12-15T22:27:43+00:00</updated>
+  <media:group>
+   <media:title>Suspicious Boing Boings - Umineko</media:title>
+   <media:content url="https://www.youtube.com/v/bk7Fdj7uzTI?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i3.ytimg.com/vi/bk7Fdj7uzTI/hqdefault.jpg" width="480" height="360"/>
+   <media:description>The only way to solve umineko...
+Follow me for more shitposts: 
+➢ Twitter: https://twitter.com/zecheru_razvan
+➢  (+18) Discord :  https://discord.gg/4BdybqcUZC
+Anime: JoJo's Bizarre Adventure: Stone Ocean
+
+
+
+#umineko #jojo</media:description>
+   <media:community>
+    <media:starRating count="69" average="5.00" min="1" max="5"/>
+    <media:statistics views="1076"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:B3NJsINdg1c</id>
+  <yt:videoId>B3NJsINdg1c</yt:videoId>
+  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
+  <title>Internet Chatrooms - Umineko</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=B3NJsINdg1c"/>
+  <author>
+   <name>Wada Zecheru</name>
+   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
+  </author>
+  <published>2022-12-13T23:07:41+00:00</published>
+  <updated>2022-12-13T23:38:32+00:00</updated>
+  <media:group>
+   <media:title>Internet Chatrooms - Umineko</media:title>
+   <media:content url="https://www.youtube.com/v/B3NJsINdg1c?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i3.ytimg.com/vi/B3NJsINdg1c/hqdefault.jpg" width="480" height="360"/>
+   <media:description>Dont be a troll.
+Follow me for more shitposts: 
+➢ Twitter: https://twitter.com/zecheru_razvan
+➢  (+18) Discord :  https://discord.gg/4BdybqcUZC
+
+#umineko</media:description>
+   <media:community>
+    <media:starRating count="178" average="5.00" min="1" max="5"/>
+    <media:statistics views="1700"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:8C3QK4owjAY</id>
+  <yt:videoId>8C3QK4owjAY</yt:videoId>
+  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
+  <title>Magical DoReMi Battler - Umineko</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=8C3QK4owjAY"/>
+  <author>
+   <name>Wada Zecheru</name>
+   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
+  </author>
+  <published>2022-12-12T01:21:26+00:00</published>
+  <updated>2022-12-12T01:25:44+00:00</updated>
+  <media:group>
+   <media:title>Magical DoReMi Battler - Umineko</media:title>
+   <media:content url="https://www.youtube.com/v/8C3QK4owjAY?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i1.ytimg.com/vi/8C3QK4owjAY/hqdefault.jpg" width="480" height="360"/>
+   <media:description>Battler has fallen to the witch side....
+Follow me for more shitposts: 
+➢ Twitter: https://twitter.com/zecheru_razvan
+➢  (+18) Discord :  https://discord.gg/4BdybqcUZC
+Audio: Ojamajo Doremi-Opening
+
+#umineko</media:description>
+   <media:community>
+    <media:starRating count="73" average="5.00" min="1" max="5"/>
+    <media:statistics views="744"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:l-Luy2uH668</id>
+  <yt:videoId>l-Luy2uH668</yt:videoId>
+  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
+  <title>Just The Two Of Us</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=l-Luy2uH668"/>
+  <author>
+   <name>Wada Zecheru</name>
+   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
+  </author>
+  <published>2022-12-10T10:34:29+00:00</published>
+  <updated>2022-12-10T14:08:42+00:00</updated>
+  <media:group>
+   <media:title>Just The Two Of Us</media:title>
+   <media:content url="https://www.youtube.com/v/l-Luy2uH668?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i1.ytimg.com/vi/l-Luy2uH668/hqdefault.jpg" width="480" height="360"/>
+   <media:description>#umineko</media:description>
+   <media:community>
+    <media:starRating count="180" average="5.00" min="1" max="5"/>
+    <media:statistics views="2494"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:9H-zc3OwcW8</id>
+  <yt:videoId>9H-zc3OwcW8</yt:videoId>
+  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
+  <title>Not Saying Incompetent For An Entire Episode Challenge - Umineko</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=9H-zc3OwcW8"/>
+  <author>
+   <name>Wada Zecheru</name>
+   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
+  </author>
+  <published>2022-12-02T01:46:45+00:00</published>
+  <updated>2022-12-02T02:17:04+00:00</updated>
+  <media:group>
+   <media:title>Not Saying Incompetent For An Entire Episode Challenge - Umineko</media:title>
+   <media:content url="https://www.youtube.com/v/9H-zc3OwcW8?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i2.ytimg.com/vi/9H-zc3OwcW8/hqdefault.jpg" width="480" height="360"/>
+   <media:description>Should’ve named it Worst Pain...
+Follow me for more shitposts: 
+➢ Twitter: https://twitter.com/zecheru_razvan
+➢  (+18) Discord :  https://discord.gg/4BdybqcUZC
+Audio: Worst Pain Known To Man | Hamish &amp; Andy
+
+#umineko</media:description>
+   <media:community>
+    <media:starRating count="77" average="5.00" min="1" max="5"/>
+    <media:statistics views="1244"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:YvPutcodo6Q</id>
+  <yt:videoId>YvPutcodo6Q</yt:videoId>
+  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
+  <title>DENJI, DO YOU LIKE? - UMINEKO</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=YvPutcodo6Q"/>
+  <author>
+   <name>Wada Zecheru</name>
+   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
+  </author>
+  <published>2022-11-30T13:37:32+00:00</published>
+  <updated>2022-11-30T13:40:14+00:00</updated>
+  <media:group>
+   <media:title>DENJI, DO YOU LIKE? - UMINEKO</media:title>
+   <media:content url="https://www.youtube.com/v/YvPutcodo6Q?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i2.ytimg.com/vi/YvPutcodo6Q/hqdefault.jpg" width="480" height="360"/>
+   <media:description>I LIKE IT VERY MUCH
+Follow me for more shitposts: 
+➢ Twitter: https://twitter.com/zecheru_razvan
+➢  (+18) Discord :  https://discord.gg/4BdybqcUZC
+Anime: Chainsaw Man
+Meme format credit:  @BlueEyes1412
+DENJI, YOU LIKE THIS TOO RIGHT?
+#umineko #chainsawman</media:description>
+   <media:community>
+    <media:starRating count="246" average="5.00" min="1" max="5"/>
+    <media:statistics views="8202"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:2_8TaPvSSks</id>
+  <yt:videoId>2_8TaPvSSks</yt:videoId>
+  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
+  <title>Something New Happened - Umineko</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=2_8TaPvSSks"/>
+  <author>
+   <name>Wada Zecheru</name>
+   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
+  </author>
+  <published>2022-11-27T23:10:33+00:00</published>
+  <updated>2022-11-27T23:12:47+00:00</updated>
+  <media:group>
+   <media:title>Something New Happened - Umineko</media:title>
+   <media:content url="https://www.youtube.com/v/2_8TaPvSSks?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i3.ytimg.com/vi/2_8TaPvSSks/hqdefault.jpg" width="480" height="360"/>
+   <media:description>Si Señor....
+Follow me for more shitposts: 
+➢ Twitter: https://twitter.com/zecheru_razvan
+➢  (+18) Discord :  https://discord.gg/4BdybqcUZC
+Song:  The Prom - You Happened (Official Video)
+
+#umineko</media:description>
+   <media:community>
+    <media:starRating count="130" average="5.00" min="1" max="5"/>
+    <media:statistics views="2366"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:tUKK2NZNJG4</id>
+  <yt:videoId>tUKK2NZNJG4</yt:videoId>
+  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
+  <title>Drifting - Umineko</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=tUKK2NZNJG4"/>
+  <author>
+   <name>Wada Zecheru</name>
+   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
+  </author>
+  <published>2022-11-16T23:14:51+00:00</published>
+  <updated>2022-12-12T12:26:57+00:00</updated>
+  <media:group>
+   <media:title>Drifting - Umineko</media:title>
+   <media:content url="https://www.youtube.com/v/tUKK2NZNJG4?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i1.ytimg.com/vi/tUKK2NZNJG4/hqdefault.jpg" width="480" height="360"/>
+   <media:description>Umineko episode 8 leaked 
+Follow me for more shitposts: 
+➢ Twitter: https://twitter.com/zecheru_razvan
+➢  (+18) Discord :  https://discord.gg/4BdybqcUZC
+Anime:  Initial D - Gas Gas Gas Scene
+
+#umineko #InitialD #FifthStage #GasGasGas</media:description>
+   <media:community>
+    <media:starRating count="101" average="5.00" min="1" max="5"/>
+    <media:statistics views="1242"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:DSocJkWaVnA</id>
+  <yt:videoId>DSocJkWaVnA</yt:videoId>
+  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
+  <title>Party Time - Umineko</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=DSocJkWaVnA"/>
+  <author>
+   <name>Wada Zecheru</name>
+   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
+  </author>
+  <published>2022-11-08T23:25:24+00:00</published>
+  <updated>2022-11-10T17:38:10+00:00</updated>
+  <media:group>
+   <media:title>Party Time - Umineko</media:title>
+   <media:content url="https://www.youtube.com/v/DSocJkWaVnA?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i1.ytimg.com/vi/DSocJkWaVnA/hqdefault.jpg" width="480" height="360"/>
+   <media:description>Party time with the gang.
+Follow me for more shitposts: 
+➢ Twitter: https://twitter.com/zecheru_razvan
+➢  (+18) Discord :  https://discord.gg/4BdybqcUZC
+Song: The Northern Boys - Party Time
+
+#umineko</media:description>
+   <media:community>
+    <media:starRating count="83" average="5.00" min="1" max="5"/>
+    <media:statistics views="1156"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:nWwUShhOgbY</id>
+  <yt:videoId>nWwUShhOgbY</yt:videoId>
+  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
+  <title>Erika vs Dlanor - Umineko</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=nWwUShhOgbY"/>
+  <author>
+   <name>Wada Zecheru</name>
+   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
+  </author>
+  <published>2022-11-03T23:20:55+00:00</published>
+  <updated>2022-11-06T00:06:03+00:00</updated>
+  <media:group>
+   <media:title>Erika vs Dlanor - Umineko</media:title>
+   <media:content url="https://www.youtube.com/v/nWwUShhOgbY?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i3.ytimg.com/vi/nWwUShhOgbY/hqdefault.jpg" width="480" height="360"/>
+   <media:description>This level of reasoning is possible for Furudo Erika.
+Follow me for more shitposts: 
+➢ Twitter: https://twitter.com/zecheru_razvan
+➢  (+18) Discord :  https://discord.gg/4BdybqcUZC
+Audio: Dunno man some guy send it to me on discord
+
+#umineko</media:description>
+   <media:community>
+    <media:starRating count="183" average="5.00" min="1" max="5"/>
+    <media:statistics views="2497"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:bSUgluINxro</id>
+  <yt:videoId>bSUgluINxro</yt:videoId>
+  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
+  <title>I Love You - Umineko</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=bSUgluINxro"/>
+  <author>
+   <name>Wada Zecheru</name>
+   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
+  </author>
+  <published>2022-11-01T23:53:21+00:00</published>
+  <updated>2022-11-02T09:07:25+00:00</updated>
+  <media:group>
+   <media:title>I Love You - Umineko</media:title>
+   <media:content url="https://www.youtube.com/v/bSUgluINxro?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i3.ytimg.com/vi/bSUgluINxro/hqdefault.jpg" width="480" height="360"/>
+   <media:description>I love Shannon and Battler....Uryuu
+Follow me for more shitposts: 
+➢ Twitter: https://twitter.com/zecheru_razvan
+➢  (+18) Discord :  https://discord.gg/4BdybqcUZC
+Song: I Love the Way by Something Rotten
+
+#umineko</media:description>
+   <media:community>
+    <media:starRating count="141" average="5.00" min="1" max="5"/>
+    <media:statistics views="1810"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:QbvLA1NvLNA</id>
+  <yt:videoId>QbvLA1NvLNA</yt:videoId>
+  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
+  <title>My name is Ushiromiya Natsuhi yo - Umineko</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=QbvLA1NvLNA"/>
+  <author>
+   <name>Wada Zecheru</name>
+   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
+  </author>
+  <published>2022-10-26T22:19:14+00:00</published>
+  <updated>2022-10-27T02:29:13+00:00</updated>
+  <media:group>
+   <media:title>My name is Ushiromiya Natsuhi yo - Umineko</media:title>
+   <media:content url="https://www.youtube.com/v/QbvLA1NvLNA?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i2.ytimg.com/vi/QbvLA1NvLNA/hqdefault.jpg" width="480" height="360"/>
+   <media:description>Yo that's in red....
+Follow me for more shitposts: 
+➢ Twitter: https://twitter.com/zecheru_razvan
+➢  (+18) Discord :  https://discord.gg/4BdybqcUZC
+Audio: Breaking Bad - Skyler Confronts Jesse Scene (S1E2) 
+
+#umineko</media:description>
+   <media:community>
+    <media:starRating count="213" average="5.00" min="1" max="5"/>
+    <media:statistics views="2702"/>
+   </media:community>
+  </media:group>
+ </entry>
  <entry>
   <id>yt:video:23ug0B3xiu0</id>
   <yt:videoId>23ug0B3xiu0</yt:videoId>
@@ -34,415 +437,8 @@ Audio: Bones - Imagine Dragons
 
 #umineko</media:description>
    <media:community>
-    <media:starRating count="36" average="5.00" min="1" max="5"/>
-    <media:statistics views="450"/>
-   </media:community>
-  </media:group>
- </entry>
- <entry>
-  <id>yt:video:AOW6U3oZaDE</id>
-  <yt:videoId>AOW6U3oZaDE</yt:videoId>
-  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
-  <title>Featherine's Favorite Vegetable - Umineko</title>
-  <link rel="alternate" href="https://www.youtube.com/watch?v=AOW6U3oZaDE"/>
-  <author>
-   <name>Wada Zecheru</name>
-   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
-  </author>
-  <published>2022-10-09T20:14:55+00:00</published>
-  <updated>2022-10-09T21:55:56+00:00</updated>
-  <media:group>
-   <media:title>Featherine's Favorite Vegetable - Umineko</media:title>
-   <media:content url="https://www.youtube.com/v/AOW6U3oZaDE?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
-   <media:thumbnail url="https://i2.ytimg.com/vi/AOW6U3oZaDE/hqdefault.jpg" width="480" height="360"/>
-   <media:description>Ikuko why....
-Follow me for more shitposts: 
-➢ Twitter: https://twitter.com/zecheru_razvan
-➢  (+18) Discord :  https://discord.gg/4BdybqcUZC
-Audio: https://youtu.be/f4SmJlr2Hic
-
-
-#umineko</media:description>
-   <media:community>
-    <media:starRating count="50" average="5.00" min="1" max="5"/>
-    <media:statistics views="533"/>
-   </media:community>
-  </media:group>
- </entry>
- <entry>
-  <id>yt:video:IEuHZYBR1I8</id>
-  <yt:videoId>IEuHZYBR1I8</yt:videoId>
-  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
-  <title>Maria Witness The Miracle of Life - Umineko</title>
-  <link rel="alternate" href="https://www.youtube.com/watch?v=IEuHZYBR1I8"/>
-  <author>
-   <name>Wada Zecheru</name>
-   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
-  </author>
-  <published>2022-10-04T20:53:17+00:00</published>
-  <updated>2022-10-08T05:15:06+00:00</updated>
-  <media:group>
-   <media:title>Maria Witness The Miracle of Life - Umineko</media:title>
-   <media:content url="https://www.youtube.com/v/IEuHZYBR1I8?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
-   <media:thumbnail url="https://i2.ytimg.com/vi/IEuHZYBR1I8/hqdefault.jpg" width="480" height="360"/>
-   <media:description>Uu uu rushed video....where is musical
-Follow me for more shitposts: 
-➢ Twitter: https://twitter.com/zecheru_razvan
-➢  (+18) Discord :  https://discord.gg/4BdybqcUZC
-
-#umineko</media:description>
-   <media:community>
-    <media:starRating count="67" average="5.00" min="1" max="5"/>
-    <media:statistics views="846"/>
-   </media:community>
-  </media:group>
- </entry>
- <entry>
-  <id>yt:video:I6_-CncC-xU</id>
-  <yt:videoId>I6_-CncC-xU</yt:videoId>
-  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
-  <title>Funny Umineko - Trailer HD - 2007 - High Quality</title>
-  <link rel="alternate" href="https://www.youtube.com/watch?v=I6_-CncC-xU"/>
-  <author>
-   <name>Wada Zecheru</name>
-   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
-  </author>
-  <published>2022-09-27T23:20:49+00:00</published>
-  <updated>2022-09-29T03:00:40+00:00</updated>
-  <media:group>
-   <media:title>Funny Umineko - Trailer HD - 2007 - High Quality</media:title>
-   <media:content url="https://www.youtube.com/v/I6_-CncC-xU?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
-   <media:thumbnail url="https://i2.ytimg.com/vi/I6_-CncC-xU/hqdefault.jpg" width="480" height="360"/>
-   <media:description>Hey Battler...wanna play a game ? 
-Follow me for more shitposts: 
-➢ Twitter: https://twitter.com/zecheru_razvan
-➢  (+18) Discord :  https://discord.gg/4BdybqcUZC
-Audio: Funny Games 2007 Trailer
-
-#umineko</media:description>
-   <media:community>
-    <media:starRating count="60" average="5.00" min="1" max="5"/>
-    <media:statistics views="768"/>
-   </media:community>
-  </media:group>
- </entry>
- <entry>
-  <id>yt:video:i2bLJxZgDgQ</id>
-  <yt:videoId>i2bLJxZgDgQ</yt:videoId>
-  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
-  <title>Four Ushiromiya's in a Room Bitching - Umineko</title>
-  <link rel="alternate" href="https://www.youtube.com/watch?v=i2bLJxZgDgQ"/>
-  <author>
-   <name>Wada Zecheru</name>
-   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
-  </author>
-  <published>2022-09-18T23:31:21+00:00</published>
-  <updated>2022-09-19T23:15:01+00:00</updated>
-  <media:group>
-   <media:title>Four Ushiromiya's in a Room Bitching - Umineko</media:title>
-   <media:content url="https://www.youtube.com/v/i2bLJxZgDgQ?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
-   <media:thumbnail url="https://i2.ytimg.com/vi/i2bLJxZgDgQ/hqdefault.jpg" width="480" height="360"/>
-   <media:description>Can't they stop talking for 5 minutes...
-Follow me for more shitposts: 
-➢ Twitter: https://twitter.com/zecheru_razvan
-➢  (+18) Discord :  https://discord.gg/4BdybqcUZC
-Music: Four Jews in a Room Bitching by Falsettos (2016 Broadway Cast Recording)
-
-#umineko</media:description>
-   <media:community>
-    <media:starRating count="99" average="5.00" min="1" max="5"/>
-    <media:statistics views="1295"/>
-   </media:community>
-  </media:group>
- </entry>
- <entry>
-  <id>yt:video:Jg-NNu102Ss</id>
-  <yt:videoId>Jg-NNu102Ss</yt:videoId>
-  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
-  <title>Good Parenting - Umineko</title>
-  <link rel="alternate" href="https://www.youtube.com/watch?v=Jg-NNu102Ss"/>
-  <author>
-   <name>Wada Zecheru</name>
-   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
-  </author>
-  <published>2022-09-15T22:18:22+00:00</published>
-  <updated>2022-09-16T04:48:32+00:00</updated>
-  <media:group>
-   <media:title>Good Parenting - Umineko</media:title>
-   <media:content url="https://www.youtube.com/v/Jg-NNu102Ss?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
-   <media:thumbnail url="https://i3.ytimg.com/vi/Jg-NNu102Ss/hqdefault.jpg" width="480" height="360"/>
-   <media:description>Rosa did nothing wrong...
-Follow me for more shitposts: 
-➢ Twitter: https://twitter.com/zecheru_razvan
-➢  (+18) Discord :  https://discord.gg/4BdybqcUZC
-Audio: GOOD parenting of ADHD
-
-#umineko</media:description>
-   <media:community>
-    <media:starRating count="74" average="5.00" min="1" max="5"/>
-    <media:statistics views="890"/>
-   </media:community>
-  </media:group>
- </entry>
- <entry>
-  <id>yt:video:STql0e5OglY</id>
-  <yt:videoId>STql0e5OglY</yt:videoId>
-  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
-  <title>Battler tells a painting is fake in 10 seconds - Umineko</title>
-  <link rel="alternate" href="https://www.youtube.com/watch?v=STql0e5OglY"/>
-  <author>
-   <name>Wada Zecheru</name>
-   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
-  </author>
-  <published>2022-09-14T22:26:41+00:00</published>
-  <updated>2022-09-15T06:18:38+00:00</updated>
-  <media:group>
-   <media:title>Battler tells a painting is fake in 10 seconds - Umineko</media:title>
-   <media:content url="https://www.youtube.com/v/STql0e5OglY?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
-   <media:thumbnail url="https://i4.ytimg.com/vi/STql0e5OglY/hqdefault.jpg" width="480" height="360"/>
-   <media:description>Even if Battler had google he coudn't find the truth...
-Follow me for more shitposts: 
-➢ Twitter: https://twitter.com/zecheru_razvan
-➢  (+18) Discord :  https://discord.gg/4BdybqcUZC
-Audio: Sherlock Season 1 Episode 3 The Great Game.
-
-#umineko</media:description>
-   <media:community>
-    <media:starRating count="73" average="5.00" min="1" max="5"/>
-    <media:statistics views="808"/>
-   </media:community>
-  </media:group>
- </entry>
- <entry>
-  <id>yt:video:kgD22F9246U</id>
-  <yt:videoId>kgD22F9246U</yt:videoId>
-  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
-  <title>Gohda in a Nutshell - Umineko</title>
-  <link rel="alternate" href="https://www.youtube.com/watch?v=kgD22F9246U"/>
-  <author>
-   <name>Wada Zecheru</name>
-   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
-  </author>
-  <published>2022-09-10T22:19:56+00:00</published>
-  <updated>2022-09-14T22:29:22+00:00</updated>
-  <media:group>
-   <media:title>Gohda in a Nutshell - Umineko</media:title>
-   <media:content url="https://www.youtube.com/v/kgD22F9246U?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
-   <media:thumbnail url="https://i4.ytimg.com/vi/kgD22F9246U/hqdefault.jpg" width="480" height="360"/>
-   <media:description>Poor Gohda...don't worry you still the best chief...
-Follow me for more shitposts: 
-➢ Twitter: https://twitter.com/zecheru_razvan
-➢ Discord: https://discord.gg/4BdybqcUZC
-Audio: Funhaus
-
-
-#umineko</media:description>
-   <media:community>
-    <media:starRating count="61" average="5.00" min="1" max="5"/>
-    <media:statistics views="609"/>
-   </media:community>
-  </media:group>
- </entry>
- <entry>
-  <id>yt:video:veJSuqB3K5c</id>
-  <yt:videoId>veJSuqB3K5c</yt:videoId>
-  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
-  <title>Podcast - Umineko</title>
-  <link rel="alternate" href="https://www.youtube.com/watch?v=veJSuqB3K5c"/>
-  <author>
-   <name>Wada Zecheru</name>
-   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
-  </author>
-  <published>2022-09-07T21:25:23+00:00</published>
-  <updated>2022-09-08T07:02:18+00:00</updated>
-  <media:group>
-   <media:title>Podcast - Umineko</media:title>
-   <media:content url="https://www.youtube.com/v/veJSuqB3K5c?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
-   <media:thumbnail url="https://i3.ytimg.com/vi/veJSuqB3K5c/hqdefault.jpg" width="480" height="360"/>
-   <media:description>WHAT’S THE THINNEST LAYER OF THE EARTH CALLED?
-Follow me for more shitposts: 
-➢ Twitter: https://twitter.com/zecheru_razvan
-➢ Discord: https://discord.gg/4BdybqcUZC
-Audio: h3h3 podcast
-
-#umineko</media:description>
-   <media:community>
-    <media:starRating count="246" average="5.00" min="1" max="5"/>
-    <media:statistics views="3030"/>
-   </media:community>
-  </media:group>
- </entry>
- <entry>
-  <id>yt:video:nRFWE-wvBr4</id>
-  <yt:videoId>nRFWE-wvBr4</yt:videoId>
-  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
-  <title>Dorime - Umineko</title>
-  <link rel="alternate" href="https://www.youtube.com/watch?v=nRFWE-wvBr4"/>
-  <author>
-   <name>Wada Zecheru</name>
-   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
-  </author>
-  <published>2022-09-06T21:14:31+00:00</published>
-  <updated>2022-09-16T09:29:56+00:00</updated>
-  <media:group>
-   <media:title>Dorime - Umineko</media:title>
-   <media:content url="https://www.youtube.com/v/nRFWE-wvBr4?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
-   <media:thumbnail url="https://i3.ytimg.com/vi/nRFWE-wvBr4/hqdefault.jpg" width="480" height="360"/>
-   <media:description>Light up Rika...
-Follow me for more shitposts: 
-➢ Twitter: https://twitter.com/zecheru_razvan
-➢ Discord: https://discord.gg/4BdybqcUZC
-
-#umineko</media:description>
-   <media:community>
-    <media:starRating count="57" average="5.00" min="1" max="5"/>
-    <media:statistics views="749"/>
-   </media:community>
-  </media:group>
- </entry>
- <entry>
-  <id>yt:video:gg0bu_2874M</id>
-  <yt:videoId>gg0bu_2874M</yt:videoId>
-  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
-  <title>Magic Trick - Umineko</title>
-  <link rel="alternate" href="https://www.youtube.com/watch?v=gg0bu_2874M"/>
-  <author>
-   <name>Wada Zecheru</name>
-   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
-  </author>
-  <published>2022-08-29T19:17:48+00:00</published>
-  <updated>2022-08-30T02:40:47+00:00</updated>
-  <media:group>
-   <media:title>Magic Trick - Umineko</media:title>
-   <media:content url="https://www.youtube.com/v/gg0bu_2874M?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
-   <media:thumbnail url="https://i4.ytimg.com/vi/gg0bu_2874M/hqdefault.jpg" width="480" height="360"/>
-   <media:description>Dick Wizzard
-Follow me for more shitposts: 
-➢ Twitter: https://twitter.com/zecheru_razvan
-➢ Discord: https://discord.gg/4BdybqcUZC
-Audio: Boner Lamp
-
-#umineko</media:description>
-   <media:community>
-    <media:starRating count="96" average="5.00" min="1" max="5"/>
-    <media:statistics views="2105"/>
-   </media:community>
-  </media:group>
- </entry>
- <entry>
-  <id>yt:video:84x9HnJHVrI</id>
-  <yt:videoId>84x9HnJHVrI</yt:videoId>
-  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
-  <title>Battler Ain't Gay - Umineko</title>
-  <link rel="alternate" href="https://www.youtube.com/watch?v=84x9HnJHVrI"/>
-  <author>
-   <name>Wada Zecheru</name>
-   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
-  </author>
-  <published>2022-08-25T21:29:14+00:00</published>
-  <updated>2022-08-27T11:27:10+00:00</updated>
-  <media:group>
-   <media:title>Battler Ain't Gay - Umineko</media:title>
-   <media:content url="https://www.youtube.com/v/84x9HnJHVrI?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
-   <media:thumbnail url="https://i1.ytimg.com/vi/84x9HnJHVrI/hqdefault.jpg" width="480" height="360"/>
-   <media:description>The promise meant nothing - Some Golden Chick
-Follow me for more shitposts: 
-➢ Twitter: https://twitter.com/zecheru_razvan
-➢ Discord: https://discord.gg/4BdybqcUZC
-Audio: Scary Movie
-
-#umineko</media:description>
-   <media:community>
-    <media:starRating count="109" average="5.00" min="1" max="5"/>
-    <media:statistics views="1692"/>
-   </media:community>
-  </media:group>
- </entry>
- <entry>
-  <id>yt:video:29ZLE2uR-jk</id>
-  <yt:videoId>29ZLE2uR-jk</yt:videoId>
-  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
-  <title>Shopping Tips - Higurashi</title>
-  <link rel="alternate" href="https://www.youtube.com/watch?v=29ZLE2uR-jk"/>
-  <author>
-   <name>Wada Zecheru</name>
-   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
-  </author>
-  <published>2022-08-22T20:39:49+00:00</published>
-  <updated>2022-08-23T06:15:49+00:00</updated>
-  <media:group>
-   <media:title>Shopping Tips - Higurashi</media:title>
-   <media:content url="https://www.youtube.com/v/29ZLE2uR-jk?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
-   <media:thumbnail url="https://i3.ytimg.com/vi/29ZLE2uR-jk/hqdefault.jpg" width="480" height="360"/>
-   <media:description>Essential shopping tips to save money
-Follow me for more shitposts: 
-➢ Twitter: https://twitter.com/zecheru_razvan
-➢ Discord: https://discord.gg/4BdybqcUZC
-Audio: Breaking Bad
-
-#higurashi #higurashisotsu</media:description>
-   <media:community>
-    <media:starRating count="75" average="5.00" min="1" max="5"/>
-    <media:statistics views="787"/>
-   </media:community>
-  </media:group>
- </entry>
- <entry>
-  <id>yt:video:qvXrHU-ixIo</id>
-  <yt:videoId>qvXrHU-ixIo</yt:videoId>
-  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
-  <title>The Lost VHS Tape of Rokkenjima - Umineko</title>
-  <link rel="alternate" href="https://www.youtube.com/watch?v=qvXrHU-ixIo"/>
-  <author>
-   <name>Wada Zecheru</name>
-   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
-  </author>
-  <published>2022-08-21T00:48:32+00:00</published>
-  <updated>2022-08-21T04:12:55+00:00</updated>
-  <media:group>
-   <media:title>The Lost VHS Tape of Rokkenjima - Umineko</media:title>
-   <media:content url="https://www.youtube.com/v/qvXrHU-ixIo?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
-   <media:thumbnail url="https://i2.ytimg.com/vi/qvXrHU-ixIo/hqdefault.jpg" width="480" height="360"/>
-   <media:description>Not again....Zecheru you bastard...
-Follow me for more shitposts: 
-➢ Twitter: https://twitter.com/zecheru_razvan
-➢ Discord: https://discord.gg/4BdybqcUZC
-
-#umineko</media:description>
-   <media:community>
-    <media:starRating count="81" average="5.00" min="1" max="5"/>
-    <media:statistics views="717"/>
-   </media:community>
-  </media:group>
- </entry>
- <entry>
-  <id>yt:video:oTbFMdL0DDo</id>
-  <yt:videoId>oTbFMdL0DDo</yt:videoId>
-  <yt:channelId>UCKQgmJJfClf-_C3z_x4C-5A</yt:channelId>
-  <title>Couples Therapy - Umineko</title>
-  <link rel="alternate" href="https://www.youtube.com/watch?v=oTbFMdL0DDo"/>
-  <author>
-   <name>Wada Zecheru</name>
-   <uri>https://www.youtube.com/channel/UCKQgmJJfClf-_C3z_x4C-5A</uri>
-  </author>
-  <published>2022-08-18T22:09:09+00:00</published>
-  <updated>2022-08-18T22:45:31+00:00</updated>
-  <media:group>
-   <media:title>Couples Therapy - Umineko</media:title>
-   <media:content url="https://www.youtube.com/v/oTbFMdL0DDo?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
-   <media:thumbnail url="https://i4.ytimg.com/vi/oTbFMdL0DDo/hqdefault.jpg" width="480" height="360"/>
-   <media:description>Wait ... I'm married ? - Tohya Hachijo
-Follow me for more shitposts: 
-➢ Twitter: https://twitter.com/zecheru_razvan
-➢ Discord: https://discord.gg/4BdybqcUZC
-Audio: Couples therapy with Dwayne The Rock Johnson and Kevin Hart.
-Song: Another Love by Tom Odell
-
-Alternative title: Couples therapy with Beatrice and Battler.
-#umineko</media:description>
-   <media:community>
-    <media:starRating count="113" average="5.00" min="1" max="5"/>
-    <media:statistics views="1389"/>
+    <media:starRating count="89" average="5.00" min="1" max="5"/>
+    <media:statistics views="1347"/>
    </media:community>
   </media:group>
  </entry>

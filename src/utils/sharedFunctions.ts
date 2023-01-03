@@ -78,7 +78,7 @@ export async function delValue(
         delete table[value];
         await Deno.writeAll(
           deleteLogs,
-          encoder.encode(`${value}:${userID.toString()}`),
+          encoder.encode(`${value}:${userID.toString()}` + "\n"),
         );
         await guilds.update(server, guildData);
         return true;

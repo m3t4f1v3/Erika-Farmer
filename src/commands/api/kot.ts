@@ -16,13 +16,16 @@ createCommand({
     "Erika will send you a picture of an irl neko (cat), thinking of her master Bernkastel",
   type: ApplicationCommandTypes.ChatInput,
   execute: async (Bot, interaction) => {
-    const json = await (await fetch(`https://api.thecatapi.com/v1/images/search?api_key=${apiKey}`)).json();
-    
+    const json =
+      await (await fetch(
+        `https://api.thecatapi.com/v1/images/search?api_key=${apiKey}`,
+      )).json();
+
     let extension;
     if (iconBigintToHash(interaction.user.avatar!).startsWith("a_")) {
       extension = ".gif";
     }
-    
+
     await Bot.helpers.sendInteractionResponse(
       interaction.id,
       interaction.token,

@@ -10,7 +10,9 @@ import { parse } from "../../../deps.ts";
 
 import { createCommand } from "../mod.ts";
 import { choose } from "../../utils/sharedFunctions.ts";
+import { logger } from "../../utils/logger.ts";
 
+const log = logger({ name: "Wada" });
 var wadaVideos: string[] = [];
 var timeSinceLastWadaUpdate = Date.now();
 
@@ -21,7 +23,7 @@ async function updateWadaVideos() {
   );
 
   if (youtubeXML.status == 429) {
-    console.error("Youtube API told us to stop, therefore using cached");
+    log.error("Youtube API told us to stop, therefore using cached");
   } else {
     await Deno.writeTextFile(
       "videos.xml",

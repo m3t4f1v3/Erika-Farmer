@@ -7,13 +7,15 @@ import {
   InteractionResponseTypes,
 } from "../../deps.ts";
 
-import { BotRaw } from "../../bot.ts";
 
 import type { BigString } from "../../deps.ts";
 
 import { createCommand } from "./mod.ts";
 
 import { choose, getValues } from "../utils/sharedFunctions.ts";
+import { logger } from "../utils/logger.ts";
+
+const log = logger({ name: "Anime" });
 
 createCommand({
   name: "anime",
@@ -56,7 +58,7 @@ createCommand({
       }],
       required: false,
     }, {
-      name: "selected_tags",
+      name: "included_tags",
       description: "Choose which tags must be present, comma separated",
       type: ApplicationCommandOptionTypes.String,
       required: false,
@@ -82,7 +84,7 @@ createCommand({
       case "ecchi": {
         if (
           (await getChannel(
-            BotRaw,
+            Bot,
             interaction!.channelId!.toString() as BigString,
           ))!.nsfw
         ) {
@@ -137,7 +139,7 @@ createCommand({
       case "feet": {
         if (
           (await getChannel(
-            BotRaw,
+            Bot,
             interaction!.channelId!.toString() as BigString,
           ))!.nsfw
         ) {
@@ -166,7 +168,7 @@ createCommand({
                           "feetImages",
                         ) as string[],
                       ),
-                    ), 
+                    ),
                   },
                 }],
               },
@@ -193,7 +195,7 @@ createCommand({
         if (interaction.data!.options![0]!.options !== undefined) {
           interaction.data!.options![0]!.options!.forEach(function (option) {
             if (
-              option["name"] == "selected_tags" ||
+              option["name"] == "included_tags" ||
               option["name"] == "excluded_tags" ||
               option["name"] == "excluded_files"
             ) {
@@ -212,12 +214,12 @@ createCommand({
         }
         if (
           (await getChannel(
-            BotRaw,
+            Bot,
             interaction!.channelId!.toString() as BigString,
           ))!.nsfw || !nsfw
         ) {
           let waifu = await (await fetch(
-            "https://api.waifu.im/random/?" + waifuArguments,
+            "https://api.waifu.im/search/?" + waifuArguments,
           )).json();
 
           if (waifu["images"] !== undefined) {
@@ -293,7 +295,7 @@ createCommand({
         break;
       }
       default: {
-        console.error(interaction.data);
+        log.warn("Unhandled subcommand: " + interaction.data);
         break;
       }
     }

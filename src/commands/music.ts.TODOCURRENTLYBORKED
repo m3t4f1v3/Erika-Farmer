@@ -1,0 +1,58 @@
+import {
+  ApplicationCommandOptionTypes,
+  ApplicationCommandTypes,
+  baseEndpoints,
+  connectToVoiceChannel,
+  getBasicInfo, // unused so far
+  getURLVideoID,
+  iconBigintToHash,
+  InteractionResponseTypes,
+  BigString
+} from "../../deps.ts";
+
+import { createCommand } from "./mod.ts";
+import { logger } from "../utils/logger.ts";
+const log = logger({ name: "Music" });
+
+createCommand({
+  name: "play",
+  description: "Plays a song from youtube",
+  type: ApplicationCommandTypes.ChatInput,
+  options: [
+    {
+      name: "url",
+      description: "What video do you want to play?",
+      type: ApplicationCommandOptionTypes.String,
+      required: true,
+    },
+  ],
+  execute: async (Bot, interaction) => {
+    let extension;
+    if (iconBigintToHash(interaction.user.avatar!).startsWith("a_")) {
+      extension = ".gif";
+    }
+    const id = getURLVideoID(interaction.data!.options![0].value as string);
+    const basicInfo = await getBasicInfo(id);
+    const vc = Bot.guilds.get(interaction.guildId!)?.voiceStates.find((vc) => vc.userId === interaction.user.id)?.channelId;
+    console.info(vc)
+    //console.info(basicInfo);
+    await connectToVoiceChannel(
+      Bot,
+      interaction.guildId!.toString(),
+      vc!.toString(),
+    );
+    //editOwnVoiceState
+    await Bot.helpers.sendInteractionResponse(
+      interaction.id,
+      interaction.token,
+      {
+        type: InteractionResponseTypes.ChannelMessageWithSource,
+        data: {
+          content:
+            "Added to queue.||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||" +
+            interaction.data!.options![0].value,
+        },
+      },
+    );
+  },
+});

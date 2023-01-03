@@ -9,9 +9,45 @@ import {
 
 import { createCommand } from "./mod.ts";
 import { Bot } from "../../bot.ts";
+import { BitwisePermissionFlags } from "../../deps.ts";
 import { logger } from "../utils/logger.ts";
 
 const log = logger({ name: "Memories" });
+
+const databaseChoices = [
+  {
+    name: "quotes",
+    value: "rapistDB",
+  },
+  {
+    name: "hugs",
+    value: "hugImages",
+  },
+  {
+    name: "feet",
+    value: "feetImages",
+  },
+  {
+    name: "horny images",
+    value: "hornyImages",
+  },
+];
+
+const urlCheckParams = {
+  protocols: ["http", "https"],
+  require_tld: true,
+  require_protocol: false,
+  require_host: true,
+  require_port: false,
+  require_valid_protocol: true,
+  allow_underscores: false,
+  host_whitelist: false,
+  host_blacklist: false,
+  allow_trailing_dot: false,
+  allow_protocol_relative_urls: false,
+  disallow_auth: false,
+  validate_length: true,
+};
 
 import {
   addValue,
@@ -39,26 +75,19 @@ createCommand({
       name: "database",
       description: "Which gray cells to teach.",
       type: ApplicationCommandOptionTypes.String,
-      choices: [
-        {
-          name: "hugs",
-          value: "hugImages",
-        },
-        {
-          name: "feet",
-          value: "feetImages",
-        },
-        {
-          name: "horny images",
-          value: "hornyImages",
-        },
-      ],
+      choices: databaseChoices.slice(1),
       required: false,
     }],
   }, {
     name: "rapist",
     description: "Erika will send a nice quote",
     type: ApplicationCommandOptionTypes.SubCommand,
+    options: [{
+      name: "show_all_database",
+      description: 'which gray cells to "show", admin use only.',
+      type: ApplicationCommandOptionTypes.String,
+      choices: databaseChoices,
+    }],
   }, {
     name: "bonk",
     description: '"unteach" Erika a not so nice quote.',
@@ -72,29 +101,11 @@ createCommand({
       name: "database",
       description: 'which gray cells to "unteach"',
       type: ApplicationCommandOptionTypes.String,
-      choices: [
-        {
-          name: "quotes",
-          value: "rapistDB",
-        },
-        {
-          name: "hugs",
-          value: "hugImages",
-        },
-        {
-          name: "feet",
-          value: "feetImages",
-        },
-        {
-          name: "horny images",
-          value: "hornyImages",
-        },
-      ],
+      choices: databaseChoices,
       required: true,
     }],
   }],
   execute: async (Bot, interaction) => {
-    console.log;
     if (
       interaction.guildId &&
       (await guilds.get(interaction.guildId!.toString())) !== undefined
@@ -106,21 +117,7 @@ createCommand({
             if (
               isURL(
                 interaction.data!.options![0]!.options![0]!.value as string,
-                {
-                  protocols: ["http", "https"],
-                  require_tld: true,
-                  require_protocol: false,
-                  require_host: true,
-                  require_port: false,
-                  require_valid_protocol: true,
-                  allow_underscores: false,
-                  host_whitelist: false,
-                  host_blacklist: false,
-                  allow_trailing_dot: false,
-                  allow_protocol_relative_urls: false,
-                  disallow_auth: false,
-                  validate_length: true,
-                },
+                urlCheckParams,
               )
             ) {
               await Bot.helpers.sendInteractionResponse(
@@ -158,21 +155,7 @@ createCommand({
             if (
               isURL(
                 interaction.data!.options![0]!.options![0]!.value as string,
-                {
-                  protocols: ["http", "https"],
-                  require_tld: true,
-                  require_protocol: false,
-                  require_host: true,
-                  require_port: false,
-                  require_valid_protocol: true,
-                  allow_underscores: false,
-                  host_whitelist: false,
-                  host_blacklist: false,
-                  allow_trailing_dot: false,
-                  allow_protocol_relative_urls: false,
-                  disallow_auth: false,
-                  validate_length: true,
-                },
+                urlCheckParams,
               )
             ) {
               await addValue(
@@ -206,46 +189,115 @@ createCommand({
                 },
               );
             }
-
             break;
           }
         }
         case "rapist": {
           if (
-            await getValues(
+            interaction.data!.options![0]!.options![0] ==
+              null
+          ) {
+            const quotes = await getValues(
               interaction.guildId as bigint,
               "rapistDB",
-            )
-          ) {
-            await Bot.helpers.sendInteractionResponse(
-              interaction.id,
-              interaction.token,
-              {
-                type: InteractionResponseTypes.ChannelMessageWithSource,
-                data: {
-                  content: choose(
-                    Object.keys(
-                      await getValues(
-                        interaction.guildId as bigint,
-                        "rapistDB",
-                      ) as string[],
+            );
+            if (
+              quotes
+            ) {
+              await Bot.helpers.sendInteractionResponse(
+                interaction.id,
+                interaction.token,
+                {
+                  type: InteractionResponseTypes.ChannelMessageWithSource,
+                  data: {
+                    content: choose(
+                      Object.keys(
+                        quotes as string[],
+                      ),
                     ),
-                  ),
+                  },
                 },
-              },
-            );
+              );
+            } else {
+              await Bot.helpers.sendInteractionResponse(
+                interaction.id,
+                interaction.token,
+                {
+                  type: InteractionResponseTypes.ChannelMessageWithSource,
+                  data: {
+                    content: "no thoughts\nhead empty",
+                    flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
+                  },
+                },
+              );
+            }
           } else {
-            await Bot.helpers.sendInteractionResponse(
-              interaction.id,
-              interaction.token,
-              {
-                type: InteractionResponseTypes.ChannelMessageWithSource,
-                data: {
-                  content: "no thoughts\nhead empty",
-                  flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
+            if (
+              interaction.member!.permissions! &
+              BigInt(BitwisePermissionFlags.MANAGE_MESSAGES)
+            ) {
+              const quotes = await getValues(
+                interaction.guildId as bigint,
+                interaction.data!.options![0]!.options![0]!.value as string,
+              );
+              if (
+                quotes
+              ) {
+                log.info(
+                  "all the entries: " +
+                  Object.keys(
+                    quotes as string[],
+                  ).join("\n") as string,
+                );
+                await Bot.helpers.sendInteractionResponse(
+                  interaction.id,
+                  interaction.token,
+                  {
+                    type: InteractionResponseTypes.ChannelMessageWithSource,
+                    data: {
+                      content: "done",
+                      flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
+                    },
+                  },
+                );
+                //     await Bot.helpers.sendInteractionResponse(
+                //       interaction.id,
+                //       interaction.token,
+                //       {
+                //         type: InteractionResponseTypes.ChannelMessageWithSource,
+                //         data: {
+                //           content: Object.keys(
+                //             quotes as string[],
+                //           ).join("\n") as string,
+                //         },
+                //       },
+                //     );
+                //   } else {
+                //     await Bot.helpers.sendInteractionResponse(
+                //       interaction.id,
+                //       interaction.token,
+                //       {
+                //         type: InteractionResponseTypes.ChannelMessageWithSource,
+                //         data: {
+                //           content: "no thoughts\nhead empty",
+                //           flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
+                //         },
+                //       },
+                //     );
+              }
+            } else {
+              await Bot.helpers.sendInteractionResponse(
+                interaction.id,
+                interaction.token,
+                {
+                  type: InteractionResponseTypes.ChannelMessageWithSource,
+                  data: {
+                    content: "admin only",
+                    flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
+                  },
                 },
-              },
-            );
+              );
+            }
           }
           break;
         }
@@ -286,7 +338,7 @@ createCommand({
           break;
         }
         default: {
-          console.error(interaction.data);
+          log.warn("Unhandled subcommand: " + interaction.data);
           break;
         }
       }
@@ -295,11 +347,14 @@ createCommand({
       if (iconBigintToHash(interaction.user.avatar!).startsWith("a_")) {
         extension = ".gif";
       }
+
       guilds.update(interaction.guildId!.toString(), {
         rapistDB: {},
         feetImages: {},
         hornyImages: {},
+        hugImages: {},
       });
+
       await Bot.helpers.sendInteractionResponse(
         interaction.id,
         interaction.token,
