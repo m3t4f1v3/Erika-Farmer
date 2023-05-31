@@ -46,7 +46,7 @@ undefined`
 
 // should be fixed now
 //await updateApplicationCommands();
-// STARTS THE CONNECTION TO DISCORD
+// STARTS THE CONNECTION TO DISCORD 🤓
 
 await startBot(Bot /*back alley*/ as BotType);
 //log.info(Object.getOwnPropertyNames(Bot.cache));
@@ -55,13 +55,13 @@ await startBot(Bot /*back alley*/ as BotType);
 
 const server = Deno.listen({ port: 8080 });
 
-const emptyResponse = new Response("apparently this needs to pad a bunch", { status: 200})
-
 async function handleHttp(conn: Deno.Conn) {
   const httpConn = Deno.serveHttp(conn);
   for await (const requestEvent of httpConn) {
     // Try opening the file
-    await requestEvent.respondWith(emptyResponse);
+    await requestEvent.respondWith(
+      new Response("", { status: 200 }),
+    );
     return;
   }
 }

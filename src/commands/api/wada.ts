@@ -62,7 +62,6 @@ createCommand({
     if (iconBigintToHash(interaction.user.avatar!).startsWith("a_")) {
       extension = ".gif";
     }
-    const json = await (await fetch("https://zenquotes.io/api/random")).json();
 
     await Bot.helpers.sendInteractionResponse(
       interaction.id,

@@ -17,10 +17,16 @@ pattern = "**/*.{ts,js}"
 [languages.deno.languageServer]
 start = ["deno", "lsp", "-q"]
 
-
-
 [env]
-DENO_DIR = "/home/runner/${REPL_SLUG}/.deno"
+XDG_CONFIG_HOME = "/home/runner/.config"
 
 [nix]
 channel = "stable-22_05"
+
+[packager]
+language = "nodejs"
+
+[packager.features]
+enabledForHosting = false
+packageSearch = true
+guessImports = true

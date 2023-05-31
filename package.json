@@ -1,0 +1,23 @@
+{
+  "name": "erika-farmer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m3t4f1v3/Erika-Farmer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m3t4f1v3/Erika-Farmer/issues"
+  },
+  "homepage": "https://github.com/m3t4f1v3/Erika-Farmer#readme",
+  "dependencies": {
+    "erika-farmer": "file:"
+  }
+}

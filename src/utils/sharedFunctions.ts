@@ -87,6 +87,6 @@ export async function delValue(
   }
 }
 
-export function choose(choices: Array<string>) {
+export function choose(choices: Array<any>) {
   return choices[Math.floor(choices.length * Math.random())];
 }

@@ -13,10 +13,12 @@ import {
 import { Command } from "./src/types/commands.ts";
 
 // MAKE THE BASIC BOT OBJECT
+
+//console.log(GatewayIntents.GuildMembers | GatewayIntents.Guilds);
 const bot = createBot({
   token: configs.token,
   botId: configs.botId,
-  intents: GatewayIntents.Guilds,
+  intents: GatewayIntents.GuildMembers | GatewayIntents.Guilds,
   events: {},
 });
 

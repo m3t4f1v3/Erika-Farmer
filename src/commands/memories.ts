@@ -348,12 +348,93 @@ createCommand({
         extension = ".gif";
       }
 
-      guilds.update(interaction.guildId!.toString(), {
+      await guilds.update(interaction.guildId!.toString(), {
         rapistDB: {},
         feetImages: {},
         hornyImages: {},
         hugImages: {},
       });
+
+      if (interaction.data!.options![0].name == "intellectual") {
+        // add to normal rapistDB
+        if (interaction.data!.options![0]!.options![1] === undefined) {
+          if (
+            isURL(
+              interaction.data!.options![0]!.options![0]!.value as string,
+              urlCheckParams,
+            )
+          ) {
+            await Bot.helpers.sendInteractionResponse(
+              interaction.id,
+              interaction.token,
+              {
+                type: InteractionResponseTypes.ChannelMessageWithSource,
+                data: {
+                  content:
+                    "URLs are not allowed in the quote database, try changing the database option.",
+                  flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
+                },
+              },
+            );
+          } else {
+            await addValue(
+              interaction.data!.options![0]!.options![0]!.value as string,
+              interaction.guildId as bigint,
+              interaction.user.id,
+              "rapistDB",
+            );
+            await Bot.helpers.sendInteractionResponse(
+              interaction.id,
+              interaction.token,
+              {
+                type: InteractionResponseTypes.ChannelMessageWithSource,
+                data: {
+                  content: "Your confession has been duly noted.",
+                  flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
+                },
+              },
+            );
+          }
+        } else {
+          if (
+            isURL(
+              interaction.data!.options![0]!.options![0]!.value as string,
+              urlCheckParams,
+            )
+          ) {
+            await addValue(
+              interaction.data!.options![0]!.options![0]!.value as string,
+              interaction.guildId as bigint,
+              interaction.user.id,
+              interaction.data!.options![0]!.options![1]!.value as string,
+            );
+
+            await Bot.helpers.sendInteractionResponse(
+              interaction.id,
+              interaction.token,
+              {
+                type: InteractionResponseTypes.ChannelMessageWithSource,
+                data: {
+                  content: "Your confession has been duly noted.",
+                  flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
+                },
+              },
+            );
+          } else {
+            await Bot.helpers.sendInteractionResponse(
+              interaction.id,
+              interaction.token,
+              {
+                type: InteractionResponseTypes.ChannelMessageWithSource,
+                data: {
+                  content: "Use a URL next time.",
+                  flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
+                },
+              },
+            );
+          }
+        }
+      }
 
       await Bot.helpers.sendInteractionResponse(
         interaction.id,
