@@ -5,6 +5,7 @@ const log = logger({ name: "DB Manager" });
 
 const kwik = new Kwik();
 export const guilds = new KwikTable(kwik, "guilds");
+export const overlordTimes = new KwikTable(kwik, "overlordTimes");
 
 // Add BigInt Support
 kwik.msgpackExtensionCodec.register({

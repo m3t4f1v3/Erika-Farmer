@@ -60,7 +60,7 @@ async function handleHttp(conn: Deno.Conn) {
   for await (const requestEvent of httpConn) {
     // Try opening the file
     await requestEvent.respondWith(
-      new Response("", { status: 200 }),
+      new Response("trololo", { status: 200 }),
     );
     return;
   }
