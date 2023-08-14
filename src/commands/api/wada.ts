@@ -1,16 +1,14 @@
 import {
-  ApplicationCommandOptionTypes,
   ApplicationCommandTypes,
-  baseEndpoints,
   iconBigintToHash,
-  InteractionResponseTypes,
+  InteractionResponseTypes
 } from "../../../deps.ts";
 
 import { parse } from "../../../deps.ts";
 
-import { createCommand } from "../mod.ts";
-import { choose } from "../../utils/sharedFunctions.ts";
 import { logger } from "../../utils/logger.ts";
+import { choose } from "../../utils/sharedFunctions.ts";
+import { createCommand } from "../mod.ts";
 
 const log = logger({ name: "Wada" });
 var wadaVideos: string[] = [];

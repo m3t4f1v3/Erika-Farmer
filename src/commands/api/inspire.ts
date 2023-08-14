@@ -1,7 +1,8 @@
 import {
-  ApplicationCommandOptionTypes,
   ApplicationCommandTypes,
-  InteractionResponseTypes,
+  baseEndpoints,
+  iconBigintToHash,
+  InteractionResponseTypes
 } from "../../../deps.ts";
 
 import { createCommand } from "../mod.ts";

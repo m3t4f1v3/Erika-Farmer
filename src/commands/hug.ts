@@ -4,8 +4,8 @@ import {
   InteractionResponseTypes,
 } from "../../deps.ts";
 
+import { choose, getValues } from "../utils/sharedFunctions.ts";
 import { createCommand } from "./mod.ts";
-import { choose, embedGenerator, getValues } from "../utils/sharedFunctions.ts";
 
 createCommand({
   name: "hug",
