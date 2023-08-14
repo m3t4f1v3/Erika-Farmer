@@ -1,7 +1,7 @@
 // probably a race condition but who cares
 //import { Bot } from "../../bot.ts";
-import { guilds } from "../database/mod.ts";
 import { BitwisePermissionFlags } from "../../deps.ts";
+import { guilds } from "../database/mod.ts";
 //console.log(await guilds.getAll());
 
 /*

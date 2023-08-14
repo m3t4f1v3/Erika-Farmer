@@ -7,10 +7,9 @@ import {
   isURL,
 } from "../../deps.ts";
 
-import { createCommand } from "./mod.ts";
-import { Bot } from "../../bot.ts";
 import { BitwisePermissionFlags } from "../../deps.ts";
 import { logger } from "../utils/logger.ts";
+import { createCommand } from "./mod.ts";
 
 const log = logger({ name: "Memories" });
 

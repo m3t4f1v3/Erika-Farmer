@@ -6,8 +6,8 @@ import {
   InteractionResponseTypes,
 } from "../../deps.ts";
 
-import { createCommand } from "./mod.ts";
 import { choose, getValues } from "../utils/sharedFunctions.ts";
+import { createCommand } from "./mod.ts";
 
 createCommand({
   name: "hug",
