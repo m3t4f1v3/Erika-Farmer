@@ -5,7 +5,6 @@ import {
   InteractionResponseTypes,
 } from "../../deps.ts";
 
-import { BitwisePermissionFlags } from "../../deps.ts";
 import { logger } from "../utils/logger.ts";
 import { createCommand } from "./mod.ts";
 
@@ -14,7 +13,7 @@ const log = logger({ name: "Memories" });
 const databaseChoices = [
   {
     name: "quotes",
-    value: "rapistDB",
+    value: "kakera",
   },
   {
     name: "hugs",
@@ -69,7 +68,7 @@ createCommand({
       required: false,
     }],
   }, {
-    name: "rapist",
+    name: "kakera",
     description: "Erika will send a nice quote",
     type: ApplicationCommandOptionTypes.SubCommand,
     options: [{
@@ -102,7 +101,7 @@ createCommand({
     ) {
       switch (interaction.data!.options![0].name) {
         case "intellectual": {
-          // add to normal rapistDB
+          // add to normal kakera
           if (interaction.data!.options![0]!.options![1] === undefined) {
             if (
               isValidUrl(
@@ -126,7 +125,7 @@ createCommand({
                 interaction.data!.options![0]!.options![0]!.value as string,
                 interaction.guildId as bigint,
                 interaction.user.id,
-                "rapistDB",
+                "kakera",
               );
               await Bot.helpers.sendInteractionResponse(
                 interaction.id,
@@ -180,14 +179,14 @@ createCommand({
             break;
           }
         }
-        case "rapist": {
+        case "kakera": {
           if (
             interaction.data!.options![0]!.options![0] ==
               null
           ) {
             const quotes = await getValues(
               interaction.guildId as bigint,
-              "rapistDB",
+              "kakera",
             );
             if (
               quotes
@@ -332,14 +331,14 @@ createCommand({
       }
     } else {
       await guilds.update(interaction.guildId!.toString(), {
-        rapistDB: {},
+        kakera: {},
         feetImages: {},
         hornyImages: {},
         hugImages: {},
       });
 
       if (interaction.data!.options![0].name == "intellectual") {
-        // add to normal rapistDB
+        // add to normal kakera
         if (interaction.data!.options![0]!.options![1] === undefined) {
           if (
             isValidUrl(
@@ -363,7 +362,7 @@ createCommand({
               interaction.data!.options![0]!.options![0]!.value as string,
               interaction.guildId as bigint,
               interaction.user.id,
-              "rapistDB",
+              "kakera",
             );
             await Bot.helpers.sendInteractionResponse(
               interaction.id,

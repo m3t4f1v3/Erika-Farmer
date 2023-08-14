@@ -1,11 +1,6 @@
 // probably a race condition but who cares
 //import { Bot } from "../../bot.ts";
-<<<<<<< HEAD
 import { baseEndpoints, iconBigintToHash, Interaction } from "../../deps.ts";
-
-import { guilds } from "../database/mod.ts";
-=======
->>>>>>> d209336fe9a17c9dcf5a6fa34d2a774e7b46cd8c
 import { BitwisePermissionFlags } from "../../deps.ts";
 import { guilds } from "../database/mod.ts";
 //console.log(await guilds.getAll());
@@ -15,7 +10,7 @@ export async function updateGuilds() {
   (await Bot.activeGuildIds).forEach((guildID) => {
     if (!servers[guildID.toString()]) {
       servers[guildID.toString()] = {
-        "rapistDB": {},
+        "kakera": {},
       };
     }
   });
