@@ -1,4 +1,4 @@
 .deno/
-.db
+db/guilds/
 deleteLogs.txt
-node_modules
+node_modules/
