@@ -1,15 +1,12 @@
 import {
   ApplicationCommandOptionTypes,
   ApplicationCommandTypes,
-  baseEndpoints,
-  iconBigintToHash,
+  BitwisePermissionFlags,
   InteractionResponseTypes,
-  isURL,
 } from "../../deps.ts";
 
 import { createCommand } from "./mod.ts";
 import { Bot } from "../../bot.ts";
-import { BitwisePermissionFlags } from "../../deps.ts";
 import { logger } from "../utils/logger.ts";
 
 const log = logger({ name: "Memories" });
@@ -33,30 +30,23 @@ const databaseChoices = [
   },
 ];
 
-const urlCheckParams = {
-  protocols: ["http", "https"],
-  require_tld: true,
-  require_protocol: false,
-  require_host: true,
-  require_port: false,
-  require_valid_protocol: true,
-  allow_underscores: false,
-  host_whitelist: false,
-  host_blacklist: false,
-  allow_trailing_dot: false,
-  allow_protocol_relative_urls: false,
-  disallow_auth: false,
-  validate_length: true,
-};
-
 import {
   addValue,
   choose,
   delValue,
+  embedGenerator,
   getValues,
 } from "../utils/sharedFunctions.ts";
 
 import { guilds } from "../database/mod.ts";
+
+const isValidUrl = (urlString: string) => {
+  try {
+    return Boolean(new URL(urlString));
+  } catch (e) {
+    return false;
+  }
+};
 
 createCommand({
   name: "memories",
@@ -115,9 +105,8 @@ createCommand({
           // add to normal rapistDB
           if (interaction.data!.options![0]!.options![1] === undefined) {
             if (
-              isURL(
+              isValidUrl(
                 interaction.data!.options![0]!.options![0]!.value as string,
-                urlCheckParams,
               )
             ) {
               await Bot.helpers.sendInteractionResponse(
@@ -153,9 +142,8 @@ createCommand({
             }
           } else {
             if (
-              isURL(
+              isValidUrl(
                 interaction.data!.options![0]!.options![0]!.value as string,
-                urlCheckParams,
               )
             ) {
               await addValue(
@@ -343,11 +331,6 @@ createCommand({
         }
       }
     } else {
-      let extension;
-      if (iconBigintToHash(interaction.user.avatar!).startsWith("a_")) {
-        extension = ".gif";
-      }
-
       await guilds.update(interaction.guildId!.toString(), {
         rapistDB: {},
         feetImages: {},
@@ -359,9 +342,8 @@ createCommand({
         // add to normal rapistDB
         if (interaction.data!.options![0]!.options![1] === undefined) {
           if (
-            isURL(
+            isValidUrl(
               interaction.data!.options![0]!.options![0]!.value as string,
-              urlCheckParams,
             )
           ) {
             await Bot.helpers.sendInteractionResponse(
@@ -397,9 +379,8 @@ createCommand({
           }
         } else {
           if (
-            isURL(
+            isValidUrl(
               interaction.data!.options![0]!.options![0]!.value as string,
-              urlCheckParams,
             )
           ) {
             await addValue(
@@ -442,22 +423,15 @@ createCommand({
         {
           type: InteractionResponseTypes.ChannelMessageWithSource,
           data: {
-            embeds: [{
-              author: {
-                name: interaction.user.username,
-                url: "https://i.ytimg.com/vi/J_6yrg2v8ts/maxresdefault.jpg",
-                iconUrl:
-                  `${baseEndpoints.CDN_URL}/avatars/${interaction.user.id}/${
-                    iconBigintToHash(interaction.user.avatar!)
-                  }${extension ?? ""}`,
-              },
-              title: "There is no hope for this guild",
-              description: "*tocatta and fugue in the background*",
-              image: {
-                url:
-                  "https://64.media.tumblr.com/7147fe3c8d998cf38e38532586b3f3ec/tumblr_p89mgywuiG1tn7gkoo2_1280.png",
-              },
-            }],
+            embeds: [
+              embedGenerator(
+                interaction,
+                "https://i.ytimg.com/vi/J_6yrg2v8ts/maxresdefault.jpg",
+                "There is no hope for this guild",
+                "*tocatta and fugue in the background*",
+                "https://64.media.tumblr.com/7147fe3c8d998cf38e38532586b3f3ec/tumblr_p89mgywuiG1tn7gkoo2_1280.png",
+              ),
+            ],
             flags: 64, // 1 << 6 bitwise (https://discord.com/developers/docs/resources/channel#message-object-message-flags)
           },
         },

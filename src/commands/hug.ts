@@ -1,13 +1,11 @@
 import {
   ApplicationCommandOptionTypes,
   ApplicationCommandTypes,
-  baseEndpoints,
-  iconBigintToHash,
   InteractionResponseTypes,
 } from "../../deps.ts";
 
 import { createCommand } from "./mod.ts";
-import { choose, getValues } from "../utils/sharedFunctions.ts";
+import { choose, embedGenerator, getValues } from "../utils/sharedFunctions.ts";
 
 createCommand({
   name: "hug",
@@ -22,33 +20,21 @@ createCommand({
     },
   ],
   execute: async (Bot, interaction) => {
-    let extension;
-    if (iconBigintToHash(interaction.user.avatar!).startsWith("a_")) {
-      extension = ".gif";
-    }
-
     await Bot.helpers.sendInteractionResponse(
       interaction.id,
       interaction.token,
       {
         type: InteractionResponseTypes.ChannelMessageWithSource,
         data: {
-          embeds: [{
-            author: {
-              name: interaction.user.username,
-              url:
-                "https://sketchfab.com/models/81782e0f3b94472ab2e339f2e577246c/embed?camera=0&dnt=1",
-              iconUrl:
-                `${baseEndpoints.CDN_URL}/avatars/${interaction.user.id}/${
-                  iconBigintToHash(interaction.user.avatar!)
-                }${extension ?? ""}`,
-            },
-            title: "I love you",
-            description: `<@${interaction.user.id}> hugs <@${
-              interaction.data!.options![0].value
-            }>`,
-            image: {
-              url: choose(
+          embeds: [
+            embedGenerator(
+              interaction,
+              "https://sketchfab.com/models/81782e0f3b94472ab2e339f2e577246c/embed?camera=0&dnt=1",
+              "I love you",
+              `<@${interaction.user.id}> hugs <@${
+                interaction.data!.options![0].value
+              }>`,
+              choose(
                 Object.keys(
                   await getValues(
                     interaction.guildId as bigint,
@@ -56,8 +42,8 @@ createCommand({
                   ) as string[],
                 ),
               ),
-            },
-          }],
+            ),
+          ],
         },
       },
     );

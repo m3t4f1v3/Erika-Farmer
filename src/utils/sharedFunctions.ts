@@ -1,5 +1,7 @@
 // probably a race condition but who cares
 //import { Bot } from "../../bot.ts";
+import { baseEndpoints, iconBigintToHash, Interaction } from "../../deps.ts";
+
 import { guilds } from "../database/mod.ts";
 import { BitwisePermissionFlags } from "../../deps.ts";
 //console.log(await guilds.getAll());
@@ -89,4 +91,38 @@ export async function delValue(
 
 export function choose(choices: Array<any>) {
   return choices[Math.floor(choices.length * Math.random())];
+}
+
+export function getNovelName(user: User) {
+  return user?.nick ??
+        user?.globalName ??
+        user?.user?.username ??
+        user?.username
+}
+
+export function embedGenerator(
+  interaction: Interaction,
+  url?: string,
+  title?: string,
+  description?: string,
+  image?: string,
+) {
+  let extension;
+  if (iconBigintToHash(interaction.user.avatar!).startsWith("a_")) {
+    extension = ".gif";
+  }
+  return {
+    author: {
+      name: getNovelName(interaction.member),
+      url: url,
+      iconUrl: `${baseEndpoints.CDN_URL}/avatars/${interaction.user.id}/${
+        iconBigintToHash(interaction.user.avatar!)
+      }${extension ?? ""}`,
+    },
+    title: title ?? "",
+    description: description ?? "",
+    image: {
+      url: image ?? "",
+    },
+  };
 }
