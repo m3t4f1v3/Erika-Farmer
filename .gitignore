@@ -1,3 +1,4 @@
 .deno/
 .db
 deleteLogs.txt
+node_modules
