@@ -1,4 +1,6 @@
 .deno/
 db/guilds/
+db/overlordTimes/
 deleteLogs.txt
 node_modules/
+fileloader.ts
